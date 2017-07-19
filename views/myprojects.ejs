@@ -1,0 +1,55 @@
+<!--
+<div>
+    <h2>Geo Tweet App </h2>
+    
+</div>    
+
+<div>
+    <h2>Harry Potter App </h2>
+    <!--<iframe 
+        src="https://geo-tweet.herokuapp.com/" 
+        name="targetframe" 
+        allowTransparency="true" 
+        scrolling="no" 
+        frameborder="0" >
+    </iframe> -->
+<!--</div>   
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <%- include partials/head %>
+
+</head>
+<body>
+
+	<%- include partials/header %>
+    <div class = "content-padding">
+        <h1>My Projects!</h1>
+        
+                <h2>Geo Tweet App </h2>
+                <object type="text/html" 
+                    data="https://geo-tweet.herokuapp.com/" 
+                    width="600px" 
+                    height="400px" 
+                    style="overflow:auto;border:5px ridge blue">
+                </object>
+                
+                <a href = "https://geo-tweet.herokuapp.com/" >
+        		<h4>View</h4>
+        		</a>
+    </div>    
+    
+    
+
+
+
+
+ 
+
+  <%- include partials/scripts %>
+
+</body>
+</html>
