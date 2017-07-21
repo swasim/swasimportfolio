@@ -4,13 +4,10 @@ var http = require( 'http' );
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-//var MongoClient = require('mongodb').MongoClient;
 
-//var assert = require('assert');
-
-
+var MongoClient = require('mongodb').MongoClient;
+var assert = require('assert');
 var app = express();
-
 
 
 //MongoDB setup
@@ -53,7 +50,7 @@ app.get('/contact', routes.contactme);
 //not found
 app.get('*', routes.notFound);
 
-/*
+
 // Connection URL
 var url = process.env.MONGOLAB_URI;
 
@@ -64,9 +61,10 @@ MongoClient.connect(url, function(err, db) {
   console.log("Connected successfully to server");
 
   db.close();
-});*/
+});
 
 http.createServer( app ).listen( port,() => {
+  
         console.log("We are live on "+ port); 
 });
 
