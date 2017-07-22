@@ -1,0 +1,7 @@
+### NPM ###
+npm-debug.log
+node_modules
+.env
+
+### API KEYS ###
+config.js
