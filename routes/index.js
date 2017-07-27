@@ -1,6 +1,18 @@
-var projectsJSON = require('../projects.json');
-var db = require('../app.js')
-var CONTACTS_COLLECTION = "contacts";
+const express = require( 'express' );
+const bodyParser = require('body-parser');
+const assert = require('assert');
+const mongodb = require('mongodb');
+const MongoClient =  require('mongodb').MongoClient;
+const dataURL = process.env.MONGOLAB_URI; 
+//mongodb.MongoClient.connect(process.env.MONGOLAB_URI);
+const _ = require('lodash');
+const app = express();
+
+var EMAIL_COLLECTION = "emails";
+
+//MongoDB setup
+app.use(bodyParser.urlencoded({ extended: false })) 
+app.use(bodyParser.json());
 
 exports.homepage = function (req, res) {
     //var projects = projectsJSON.projects;
@@ -11,14 +23,33 @@ exports.resume = function (req, res) {
 };
 
 
-exports.contactme = function(req, res){
+exports.contactme = function(req, res, next){
 	res.render('contactme');
-	
-};	
-	
-	
+};
 
 
+
+exports.contactSuccess = function (req, res, next) {
+    var email = {
+        name: req.body.name,
+        email: req.body.email,
+        message: req.body.message
+    }
+    MongoClient.connect(dataURL, function(err, dataURL){
+        console.log("Connected");
+        assert.equal(null, err);
+        dataURL.collection('emails').insertOne(email, function(err, result){
+            assert.equal(null, err);
+            console.log('Email inserted');
+            if (err)
+                res.send('Error');
+            else
+                res.render('contactSuccess');
+
+        });
+
+    });
+}
 
 
 
@@ -65,7 +96,9 @@ exports.myprojects = function(req, res) {
 		});
 	}
 
-    }};*/
+    }};
+var projectsJSON = require('../projects.json');    
+    */
 
 
 
