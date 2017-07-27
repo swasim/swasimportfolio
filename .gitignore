@@ -1,12 +1,1 @@
-### NPM ###
-npm-debug.log
-node_modules
-.env
-
-### API KEYS ###
-config.js.env*
-mongod
-package-lock.json
 config.js
-env.example
-public/images
