@@ -58,17 +58,8 @@
   </div>
 
 
-    <div class="s-navbar-container">
-          <nav id="nav-wrap">
-             <ul id="nav" class="nav">
-                <li class="current"><a class="smoothscroll" href="/">Home</a></li>
-                <li><a class="smoothscroll" href="/myworld">My World</a></li>
-                <li><a class="smoothscroll" href="/thisisme">About Me</a></li>
-    	         <li><a class="smoothscroll" href="/resume">Resume</a></li>
-                <li><a class="smoothscroll" href="/myprojects">Projects</a></li>
-                <li><a class="smoothscroll" href="/contact">Contact</a></li>
-             </ul> <!-- end #nav -->
-          </nav> <!-- end #nav-wrap -->
+    <div class="navbarcontainer">
+         <%- include partials/header %>
     </div>
 
 
@@ -86,7 +77,7 @@
 	                <table>
 		                <tbody>
 			                <tr>
-				<td class="wsite-multicol-col" style="width:13.318722098844%; padding:0 45px;">
+				<td style="width:13.318722098844%; padding:0 45px;">
 					
 						
 
@@ -96,16 +87,19 @@
 					
 						
 
-<div><div style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
-<a>
-<img src="/images/professionalPic.jpg" alt="Picture" style="width:auto;max-width:100%">
-</a>
-<div style="display:block;font-size:90%"></div>
-</div></div>
-
-
-					
-				</td>				<td class="wsite-multicol-col" style="width:40.236173935775%; padding:0 45px;">
+    <div>
+        <div style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+            <a>
+                <img src="/images/professionalPic.jpg" alt="Picture" style="width:auto;max-width:100%">
+            </a>
+        <div style="display:block;font-size:90%">
+        
+    </div>
+</div>
+</div>
+    
+    </td>				
+				<td class="wsite-multicol-col" style="width:40.236173935775%; padding:0 45px;">
 					
 						
 
@@ -115,25 +109,30 @@
 
 <div class="wsite-spacer" style="height:10px;"></div>
 
-<div class="paragraph">&#8203;Integer vel sapien id nisi gravida sodales. Aliquam convallis lorem sapien, sit amet vehicula dui volutpat id. Suspendisse at nisi nec neque dignissim iaculis ut id quam. Suspendisse et vehicula urna, congue tempor tellus. Fusce fringilla scelerisque egestas. Suspendisse potenti.&nbsp;<br><br>&#8203;Donec maximus felis sed purus semper iaculis. Donec vitae eleifend sapien. Phasellus augue id varius volutpat.&nbsp;</div>
+<div class="paragraph">&#8203;Integer vel sapien id nisi gravida sodales. Aliquam convallis lorem sapien, sit amet vehicula dui volutpat id. Suspendisse at nisi nec neque dignissim iaculis ut id quam. Suspendisse et vehicula urna, congue tempor tellus. Fusce fringilla scelerisque egestas. Suspendisse potenti.&nbsp;<br>
+<br>&#8203;Donec maximus felis sed purus semper iaculis. Donec vitae eleifend sapien. Phasellus augue id varius volutpat.&nbsp;</div>
 
 <div style="text-align:left;"><div style="height: 30px; overflow: hidden;"></div>
-<a class="wsite-button wsite-button-large wsite-button-highlight" href="javascript:;">
+<a class="wsite-button wsite-button-large wsite-button-highlight" href="/thisisme">
 <span class="wsite-button-inner">More About Me</span>
 </a>
 <div style="height: 0px; overflow: hidden;"></div></div>
 
 
 					
-				</td>				<td class="wsite-multicol-col" style="width:13.418880272432%; padding:0 45px;">
+				</td>				
+				<td class="wsite-multicol-col" style="width:13.418880272432%; padding:0 45px;">
 					
 						
 
-<div class="wsite-spacer" style="height:50px;"></div>
+<div class="wsite-spacer" style="height:50px;">
+    
+</div>
 
 
 					
-				</td>			</tr>
+				</td>			
+				</tr>
 		</tbody>
 	</table>
 </div></div></div>
