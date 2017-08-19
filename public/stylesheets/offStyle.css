@@ -9165,7 +9165,6 @@ ul.slides li.slide {
     position: relative;
     overflow: hidden;
     margin-left: 0;
-    min-height: 100vh;
     font-size: 16px
 }
 
@@ -9856,9 +9855,6 @@ ul.slides li.slide {
     height: 100%
 }
 
-.page_blog-wrapper .page_blog-col-placeholder .page_blog-col-body {
-    min-height: 100px
-}
 
 .page_blog-left .page_blog-wrapper .page_blog-col-placeholder .page_blog-col-body {
     margin: 0;
