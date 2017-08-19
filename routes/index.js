@@ -4,11 +4,8 @@ const assert = require('assert');
 const mongodb = require('mongodb');
 const MongoClient =  require('mongodb').MongoClient;
 const dataURL = process.env.MONGOLAB_URI; 
-//mongodb.MongoClient.connect(process.env.MONGOLAB_URI);
-const _ = require('lodash');
 const app = express();
 
-var EMAIL_COLLECTION = "emails";
 
 //MongoDB setup
 app.use(bodyParser.urlencoded({ extended: false })) 
@@ -18,15 +15,27 @@ exports.homepage = function (req, res) {
     //var projects = projectsJSON.projects;
     res.render("homepage");
 };
+
+
 exports.resume = function (req, res) {
     res.render("resume");
 };
 
+exports.introduction = function (req, res) {
+    res.render("introduction");
+};
+
+exports.myworld = function (req, res) {
+    res.render("myworld");
+};
+
+exports.myBlog = function (req, res) {
+    res.render("myBlog");
+};
 
 exports.contactme = function(req, res, next){
 	res.render('contactme');
 };
-
 
 
 exports.contactSuccess = function (req, res, next) {
@@ -56,6 +65,8 @@ exports.contactSuccess = function (req, res, next) {
 exports.myprojects = function (req, res) {
     res.render("myprojects");
 };
+
+
 
 /*
 exports.myprojects = function(req, res) {

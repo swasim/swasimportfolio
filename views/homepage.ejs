@@ -4,147 +4,177 @@
         <title>
             Saher's Homepage
         </title>
+        <%- include partials/head %>
+        <link rel = "stylesheet" type="text/css" href= "/stylesheets/offStyle.css">
+        <link rel = "stylesheet" type="text/css" href= "/stylesheets/homePageStyle.css">
         
-        <%- include ./partials/head %>
         
     </head>
     
     
-<body class="show locale-en" id="user_sites" ontouchstart="" screen_capture_injected="true"> 
-    <div class="s-bg-image s-bg-light-text s-bg-overlay navigator s-navbar-section s-section backroundimg">
-        <div class="container">
-            <div class="columns sixteen">
-                <div class="impression">
-    
-                    <div class="left">
-                        <div class="s-onyxnew-logo">
-                            <div class="s-component s-image">
-                                <span>
-                                    <div class="s-component-content">
+<body>
+    <div id = "navbar">
+        <%- include partials/header %>
+        
+    </div>
+    <div id="page_container">
+        <div id = page_content class = "page_content">
+            <div class="page_image page_bkg-light page_bkg-overlay navigator page_navbar-section page_section" style="
+                vertical-align: middle;
+                height: 579px;
+                background-image: url(/images/103844.jpg);
+                background-repeat: no-repeat;
+                background-position: 50.00% 0.00%;
+                background-size: 100%;
+                background-color: transparent;">
+                <div class="imgcontainer">
+                    <div class="columns sixteen">
+                        <div class="backimpression">
+                            <div class="left">
+                                <div class= "page_onyxnew_pic">
+                                    <div class="page_component page_image">
                                         <div>
-                                           <img src="/images/professionalPic.jpg" alt="" title="" class="crop-default" data-description="">
+                                            <img src="/images/professionalPic.jpg" alt="" title="" class="crop-default" data-description="">
                                         </div>
                                     </div>
-                                </span>
+                                </div>
+                            </div>
+                            <div class ="right">
+                                <div class = "header_text">
+                                    <div class ="page_title">
+                                        <h1>
+                                            <p>Saher Wasim</p>
+                                        </h1>
+                                    </div>
+                                    <div class="page_subtitle">
+                                        <p style= "font-size: 30px;">
+                                            Frontend Engineer
+                                        </p>
+                                    </div>
+                                    <div id="button">
+                                        <a class="learnbtn" href="/introduction">
+                                            <span>Welcome To My Universe</span>
+                                        </a>
+                                    </div>
+                                </div>    
                             </div>
                         </div>
                     </div>
-        <div style="text-align:center; margin-top: -17%;">
-        
-        
-                <div class="header-title">
-                    <div>
-                        <h1>
-                            <p>Saher Wasim</p>
-                        </h1>
-                    </div>
                 </div>
-                <div class="header-subtitle">
-                    <div class="s-component s-text">
-                        <h3 class="s-component-content s-font-heading">
-                            <p>Frontend Engineer</p>
-                        </h3>
-                    </div>
-                </div>
-            
-            <a class="learnbtn" href="/thisisme">
-                <span>Welcome To My Universe</span>
-            </a>
+            </div>
         </div>
-            
-    </div>
-  </div>
-  </div>
-  </div>
-
-
-    <div class="navbarcontainer">
-         <%- include partials/header %>
-    </div>
-
-
-
-<!-- Next Page Preview -->
-
-    <div>
-		<div class="container">
-			<div>
-				<div style="height:50px;"></div>
-
-            <div>
-                <div>
-                    <div style="margin:0 -45px;">
-	                <table>
-		                <tbody>
-			                <tr>
-				<td style="width:13.318722098844%; padding:0 45px;">
-					
-						
-
-<div class="wsite-spacer" style="height:50px;"></div>
-</td>
-				<td class="wsite-multicol-col" style="width:33.026223692949%; padding:0 45px;">
-					
-						
-
-    <div>
-        <div style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
-            <a>
-                <img src="/images/professionalPic.jpg" alt="Picture" style="width:auto;max-width:100%">
-            </a>
-        <div style="display:block;font-size:90%">
         
-    </div>
+        
+        <!-- Next Page Preview -->
+         
+         <div id = page_content class = "page_content" style ="background-color: #f0f0ed;">
+            <div class="container">
+        	    
+                    <div style="margin:0 -45px;">
+        	            <table>
+        		            <tbody>
+        			            <tr>
+        			                
+        				    <!-- IMAGE IN ABOUT ME SECTION
+        				        <td style="width:33.026223692949%; padding:0 45px;">
+        				        
+                                    <div style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+                                        <a><img src="/images/professionalPic.jpg" alt="Picture" style="width:auto;max-width:100%"></a>
+                                        <div style="display:block;font-size:90%"></div>
+                                    </div>
+                              
+                                </td>
+                            -->
+                            
+                            <div style="height:40px;"></div>
+    					            <div id="aboutMeHeader">
+                                        <div class ="educationTitle" style="width: 918px;">
+                                            <div style = "margin-top: 10px; position: relative;">
+                                                <h2 style ="font-size: 25px; text-transform: uppercase; font-weight: bold; font-family: lato,sans-serif;">
+                                                    <p style="margin-left: 50px;">About Me</p>
+                                                </h2>
+                                            </div>
+                                        </div>    
+                                    </div>
+                                 
+        				        <td style="width:100.026223692949%; padding:0 115px;">
+    					            
+                                    
+    					            <div id="aboutMeText">
+                                        <h2 style="font-size:25px">I'm Saher Wasim</h2>
+                                            <div style="height:10px;"></div>
+                                        <div class="paragraph" style="font-size: 14px; line-height: 1.35;">&#8203;Living in the heart of San Francisco, where, I have now been a frontend developer for 4 years! <br>&#8203;<br>&#8203;Wow! It has been 4 years already! I enjoy the relief I get when I solve problems,
+                                        big problems, small problems, any size the problem may be, I will solve it. &nbsp;<br>What do I do for fun you ask?<br>&#8203;<br>&#8203;Well, when you don't see me solving problems, then you might just find me see saving all the animals in the world! I LOVE DOGS!&nbsp;<br><br>&#8203;And, when I'm not being an animal super hero, you'll find me 
+                                        in some park sipping my mocha, drawing, writing spoken word, and enjoying the breeze!&nbsp;</div>
+                                    
+                                        <div style="text-align:left;">
+                                            <div style="height: 30px; overflow: hidden;"></div>
+                                            <a href="/introduction"><span>More About Me</span></a>
+                                            <div style="height: 50px; overflow: hidden;"></div>
+                                        </div>
+                                    </div>    
+                                </td>
+                                <!-- END OF ABOUT ME SECTION -->
+                                <td style="width:13.418880272432%; padding:0 45px;"></td>
+        				        			
+        			        </tr>
+        		        </tbody>
+        	            </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+         
+        <!-- Education-->
+        <%- include partials/homePageLayout/education %>
+         
+         
+        <!--End Education-->
+         
+         
+         
+         
+         
+         
+            
+        <!------------ Footer ----------->
+           
+        <div>
+            <%- include partials/footer %>
+        </div>
+
+        <!---------- END FOOTER --------->
+ 
+    </div>        
 </div>
-</div>
-    
-    </td>				
-				<td class="wsite-multicol-col" style="width:40.236173935775%; padding:0 45px;">
-					
-						
 
-<div class="wsite-spacer" style="height:50px;"></div>
-
-<h2 class="wsite-content-title">I'm Saher Wasim</h2>
-
-<div class="wsite-spacer" style="height:10px;"></div>
-
-<div class="paragraph">&#8203;Integer vel sapien id nisi gravida sodales. Aliquam convallis lorem sapien, sit amet vehicula dui volutpat id. Suspendisse at nisi nec neque dignissim iaculis ut id quam. Suspendisse et vehicula urna, congue tempor tellus. Fusce fringilla scelerisque egestas. Suspendisse potenti.&nbsp;<br>
-<br>&#8203;Donec maximus felis sed purus semper iaculis. Donec vitae eleifend sapien. Phasellus augue id varius volutpat.&nbsp;</div>
-
-<div style="text-align:left;"><div style="height: 30px; overflow: hidden;"></div>
-<a class="wsite-button wsite-button-large wsite-button-highlight" href="/thisisme">
-<span class="wsite-button-inner">More About Me</span>
-</a>
-<div style="height: 0px; overflow: hidden;"></div></div>
-
-
-					
-				</td>				
-				<td class="wsite-multicol-col" style="width:13.418880272432%; padding:0 45px;">
-					
-						
-
-<div class="wsite-spacer" style="height:50px;">
-    
-</div>
-
-
-					
-				</td>			
-				</tr>
-		</tbody>
-	</table>
-</div></div></div>
-
-<div class="wsite-spacer" style="height:50px;"></div>
-			</div>
-		</div>
-		</div>
 
 
 
 		
-<%- include partials/scripts %>         
+<%- include partials/scripts %>
+<script>
+            $(window).scroll(function() {
+            // 100 = The point you would like to fade the nav in.
+              
+            	if ($(window).scrollTop() < 520 ){
+                
+             		$('.topbar').addClass('show');
+                
+              } else {
+                
+                $('.topbar').removeClass('show');
+                
+             	};   	
+            });
+            
+            $('.scroll').on('click', function(e){		
+            		e.preventDefault()
+                
+              $('html, body').animate({
+                  scrollTop : $(this.hash).offset().top
+                }, 1500);
+            });
+        </script>
     </body>
 </html>    

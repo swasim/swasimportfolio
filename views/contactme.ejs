@@ -153,41 +153,45 @@
 
 
 
-
-
+    <div id = "navbar">
+        <%- include partials/header %>
+    </div>
+    <div style="height:150px;"></div>
 	<br class="wrapper">
 		<br id="main" style="padding:50px 0 0 0;">
 		
 		<!-- Form -->
 		<form id="contactform" action="/contact" method="post">
 		   <header>Lets get in touch!</header>
-		   
-			<br>
-				<label>
-					<span>Name: (required)</span>
-					<input placeholder="Please enter your name" name ="name" type="text" tabindex="1" required autofocus>
-				</label>
-			</br>
-			<br>
-				<label>
-					<span>Email: (required)</span>
-					<input placeholder="Please enter your email address" name = "email" type="email" tabindex="2" required>
-				</label>
-			</br>
-			<br>
-				<label>
-					<span>Message: (required)</span>
-					<textarea placeholder="Include all the details you can" name = "message"tabindex="5" required></textarea>
-				</label>
-			</br>
-			<br>
-				<button name="submit" type="submit" id="contactsubmit">Send Email</button>
-			</br>
+		    <div style= "text-align: center; line-height: 2;">
+    			<br>
+    				<label>
+    					<span>Name: (required)</span>
+    					<input placeholder="Please enter your name" name ="name" type="text" tabindex="1" required autofocus>
+    				</label>
+    			</br>
+    			<br>
+    				<label>
+    					<span>Email: (required)</span>
+    					<input placeholder="Please enter your email address" name = "email" type="email" tabindex="2" required>
+    				</label>
+    			</br>
+    			<br>
+    				<label>
+    					<span>Message: (required)</span>
+    					<textarea placeholder="Include all the details you can" name = "message"tabindex="5" required></textarea>
+    				</label>
+    			</br>
+    			<br>
+    				<button name="submit" type="submit" id="contactsubmit">Send Email</button>
+    			</br>
+			</div>
 		</form>
 		<!-- /Form -->
 		
 		</br>
 	</br>
+	<div style="height:100px;"></div>
 	
 	<script>
 	   (function() {

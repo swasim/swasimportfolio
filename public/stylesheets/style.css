@@ -13,8 +13,8 @@ body {
 
 
 
-ul {
-    list-style-type: none;
+nav ul {
+    list-style-position: inside;
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -22,15 +22,19 @@ ul {
     top: 0;
     width: 100%;
     z-index: 10;
+    font-size: 1em;
+    line-height: 1.5em;
+    
  
 }
 
-li {
+nav ul li {
     float: left;
     z-index: 10;
+    list-style-type: none;
 }
 
-li a {
+nav ul li a {
     font-size: 20px;
 	font-weight: 350;
     display: block;
@@ -41,18 +45,14 @@ li a {
     z-index: 10;
 }
 
-li:last-child {
+nav ul li:last-child {
     border-right: none;
     z-index: 10;
 }
 
 
-.active {
-    background-color: #4CAF50;
-    z-index: 10;
-}
 
-li a, .dropbtn {
+nav ul li a, .dropbtn {
     display: inline-block;
     color: white;
     text-align: center;
@@ -62,13 +62,13 @@ li a, .dropbtn {
     
 }
 
-li a:hover, .dropdown:hover .dropbtn {
-    background-color: #cce6ff;
-    background:transparent;
+nav ul li a:hover, .dropdown:hover .dropbtn {
+    color: ;
     z-index: 10;
+    text-decoration: none;
 }
 
-li.dropdown {
+nav ul li.dropdown {
     display: inline-block;
     z-index: 10;
 }
@@ -122,8 +122,32 @@ li.dropdown {
     float: left;
 }
 
-.navbarcontainer{
-    background-color: #cce6ff;
-    background:transparent;
+.topbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    display: table;
+    width: 100%;
+    height: 50px;
+    background: #8c8f90;
+    border-bottom: 1.5px solid rgba(255,255,255,0.15);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -webkit-transition: all 250ms ease-in;
+    -moz-transition: all 250ms ease-in;
+    -ms-transition: all 250ms ease-in;
+    -o-transition: all 250ms ease-in;
+    transition: all 250ms ease-in;
+}
+.show {
+    background: none; 
+
 }
 
+.transition {    
+  -webkit-transition: all 1s ease-in-out;
+	-moz-transition: all 1s ease-in-out;
+	-o-transition: all 1s ease-in-out;
+	transition: all 1s ease-in-out;
+}

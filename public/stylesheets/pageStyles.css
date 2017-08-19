@@ -1,0 +1,46 @@
+*, *:before, *:after {
+  -moz-box-sizing: border-box; 
+  -webkit-box-sizing: border-box; 
+  box-sizing: border-box;
+}
+
+
+article, aside, details, figcaption, figure, footer, header, 
+hgroup, menu, nav, section, dialog {
+    display: block
+    
+}
+
+
+audio[controls],canvas,video {
+    display: inline-block; 
+    *display: inline; zoom: 1
+}
+
+
+html {
+    height: 100%; 
+    font-size: 100%; 
+    overflow-y: scroll; 
+    -webkit-text-size-adjust: 100%
+} 
+
+
+
+/* Force scrollbar in non-IE and Remove iOS text size adjust without disabling user zoom */
+body {
+    margin: 0; min-height: 100%; 
+    -webkit-font-smoothing:antialiased; 
+    font-smoothing:antialiased; 
+    text-rendering:optimizeLegibility;color: #666
+    
+} 
+
+/* Wrapper */
+.page-main{
+  padding-top: 50px;
+  max-width: 1020px;
+}
+.page-wrapper{
+  margin: 0 auto;
+}
