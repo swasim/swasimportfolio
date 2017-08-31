@@ -516,9 +516,9 @@ body {
 
 /* column grid */
 
-.g1,
-.g2,
-.g3 {
+.sw_layout1,
+.sw_layout2,
+.sw_layout3 {
   display: block;
   position: relative;
   margin-left: 1%;
@@ -527,9 +527,9 @@ body {
 
 /* 1 column grid */
 
-.g1,
-.g2,
-.g3 {
+.sw_layout1,
+.sw_layout2,
+.sw_layout3 {
   width: 98.0%
 }
 
@@ -683,9 +683,9 @@ body {
 
 .info-wrap {}
 
-/* Photo */
+/* secImage */
 
-.photo {
+.secImage {
   float: left;
   height: 200px;
   width: 200px;
@@ -693,7 +693,7 @@ body {
   overflow: hidden;
 }
 
-.photo img {
+.secImage img {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
@@ -1146,21 +1146,21 @@ Change widths as necessary
     border-left: 1px solid #f1f1f1;
   }
   /* COLUMN GRID */
-  .g1,
-  .g2,
-  .g3 {
+  .sw_layout1,
+  .sw_layout2,
+  .sw_layout3 {
     display: inline;
     float: left
   }
 
   /* 2 COLUMN GRID */
-  .g1 {
+  .sw_layout1 {
     width: 48.0%
   }
-  .g2 {
+  .sw_layout2 {
     width: 48.0%
   }
-  .g3 {
+  .sw_layout3 {
     width: 98.0%
   }
 }
@@ -1183,13 +1183,13 @@ Change widths as necessary
     padding-top: 20px;
   }
   /* 3 COLUMN GRID */
-  .g1 {
+  .sw_layout1 {
     width: 26.333%;%
   }
-  .g2 {
+  .sw_layout2 {
     width: 64.667%;
   }
-  .g3 {
+  .sw_layout3 {
     width: 98.0%
   }
 }
