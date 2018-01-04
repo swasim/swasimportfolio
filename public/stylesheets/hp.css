@@ -1,0 +1,123 @@
+/*Page tags*/
+
+body{
+   
+   font-family: 'Concert One', cursive;
+   color:white;
+   line-height: 1;
+   font-size: calc(1.4vw + 1vh);   
+}
+
+h1{
+   padding:0;
+   margin-top:0px;
+   font-size:1.0em;
+}
+
+#headerTop{
+    background-color: transparent;
+    position: fixed;
+    width: 100%;
+    z-index: 10000;
+    transition: all .3s ease-in-out;
+}
+
+/*Nav */
+nav{
+   font-family: 'Concert One',cursive;
+   font-size:17px;
+}
+
+
+/*Page One*/
+#pageOne{
+   margin-top:100px;
+   height:100%;
+}
+#pageOne .wrapper{
+   text-decoration: none;
+   text-align: center;
+   text-transform: uppercase;
+   letter-spacing: 2px;
+   border-radius: 2px;
+   font-weight: 100;
+   padding: 1em;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   margin-right: -50%;
+   transform: translate(-50%, -50%); 
+}
+#pageOne .home{
+   text-decoration: none;
+   text-align: center;
+   letter-spacing: 7px;
+   position: relative;
+   transition: all .1s ease-in-out;
+}
+
+
+/*Page Two*/
+#pageTwo{
+    width: 100%;
+    padding: 20px;
+}
+#pageTwo .wrapper{
+   background-color:rgba(192,192,192,0.6);
+   height:100%;
+   position: relative;
+   text-decoration: none;
+   text-align: center;
+   text-transform: uppercase;
+   letter-spacing: 2px;
+   border-radius: 2px;
+   font-weight: 100;
+}
+
+/*Page Three*/
+#pageThree{
+   position: relative;
+   padding: 20px;
+   height: 100%;
+}
+#pageThree .wrapper{
+   background-color:rgba(192,192,192,0.6);
+   height: 100%;
+   text-decoration: none;
+   text-align: center;
+   text-transform: uppercase;
+   letter-spacing: 2px;
+   border-radius: 2px;
+   font-weight: 100;
+}
+
+
+
+/* Buttons */
+.btn{
+   cursor: pointer;
+}
+.btn:hover {
+    opacity: 0.6;
+}
+.btn-list .btn{
+   text-align: center;
+   text-decoration: none;
+   border-radius: 50%;
+}
+
+#pageTwo .btn{
+   border:3px solid #E0CB77;
+   color: #fff;
+   background-color:grey;
+   
+}
+
+/******Styling********/
+.center{
+   padding:1em;
+   top: 50%;
+   left: 50%;
+   margin-right: -50%;
+   transform: translate(-50%, -50%);
+}
