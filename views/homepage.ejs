@@ -13,69 +13,43 @@
            -o-background-size: cover;
            font-family: 'Concert One', cursive;
         }
-        
-     
 
     </style> 
 </head>
 
 <body>
-<header id=headerTop>
-<nav class="nav navbar-inverse navbar-fixed-top">
-<div class="container-fluid">
-     <div class="navbar-header">
-           <button type="button"
-                   class="navbar-toggle" 
-                   data-toggle="collapse"
-                   data-target="#myNavbar">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>            
-        </button>
-        <a class="navbar-brand" href="/">Saher Wasim</a>
-     </div>
-     <div class="collapse navbar-collapse" id="myNavbar">
-          <ul class="nav navbar-nav navbar-right">
-             <li class="active"><a href="#">Home</a></li>
-             <li><a href="#">Saher Wasim</a></li>  
-             <li><a href="#">About Me</a></li>         
-             <li><a href="#">Portfolio</a></li>     
-             <li><a href="#">Resume</a></li>
-             <li><a href="#">Contact Me</a></li>
-          </ul>
-     </div>                      
-</div>
-</nav>
-</header>   
+<%- include partials/header %>
 
-      <!-- Page One-->
-<section id="pageOne">
-<div class="container-fluid wrapper">
+<!----------------- Page One----------------->
+    <article id="pageOne">
+        <div class="container-fluid wrapper center">
+            <section>
+                <div class='home'>
+                    <h1 class="text-center" style="font-size:3.0em;">Saher Wasim</h1>
+                    <h2 class="text-center">Frontend Developer</h2>
+                </div>
+            </section>
+        </div>
+    </article>
 
-    <div class='home'>
-        <h1>Saher Wasim</h1>
-        <h2 class="text-center">Frontend Developer</h2>
+<!--------------- Page Two (Intro)------------>
+<article id="pageTwo">
+    <div class="container-fluid wrapper center">
+         <section>
+            <h2>Get to Node me!</h2>
+            <p style="font-size:18px">Web development, poetry, dogs, art, coffee, paint, the list goes one</p>
+            <a class="btn" href"#">Get the full scoop</a>
+        </section>
     </div>
-
-</div>
-</section>
-
-<!-- Page Two (Intro)-->
-<section id="pageTwo">
-    <div class="container-fluid wrapper">
-        <h2>Get to Node me!</h2>
-        <p style="font-size:18px">Web development, poetry, dogs, art, coffee, paint, the list goes one</p>
-        <a class="btn" href"#">Get the full scoop</a>
-
-    </div>
-</section>
+</article>
    
-   <!-- Page Three (Projects)-->
-<section id="pageThree">
+<!-- Page Three LATEST WORK -->
+<article id="pageThree">
     <div class="container-fluid wrapper">
-
-        <section style='position: absolute; left: 20px; width: 45%;'>
-            <h2>Geo Tweet App</h2>
+   
+        <div id="leftApp" class="center clearfix">
+            <section>
+            <h2>Geo Tweet App</h2> 
             <span>
                 <a href="https://geo-tweet.herokuapp.com/">
                     <img height='228' 
@@ -83,68 +57,57 @@
                      frameborder='no'
                      src='https://res.cloudinary.com/dlfsi4ilj/image/upload/v1515067120/geotweet_ta08yd.jpg'
                      allowtransparency='true' 
-                     allowfullscreen='true' 
-                     style='position: absolute;left: 20px;width: 100%;'/>
+                     allowfullscreen='true'
+                     style='position: relative; width: 100%;'
+                     class="container-fluid"/>
                 </a>
             </span>
-        </section>    
+            </section>
+        </div>
  
-    
-    
-        <section style='position: absolute; right: 20px; width: 45%;'>
-            <h2>To-Do App </h2>
+
+        <div id="rightApp" class=" center clearfix">
+            <section>
+            <h2>To-Do App</h2>
             <span>
                 <iframe height='228' 
                         title='ToDo App' 
                         src='//codepen.io/saherw22/embed/NXjRWg/?height=428&theme-id=dark&default-tab=js,result&embed-version=2' 
                         frameborder='no' 
                         allowtransparency='true' 
-                        style='position: absolute; right: 20px; width: 100%;'>
+                        style='position: relative; width: 100%;'
+                        class="container-fluid">
                     <a href='https://codepen.io/saherw22/pen/NXjRWg/'>ToDo APP</a> by Saher (<a href='https://codepen.io/saherw22'>@saherw22</a>)</a>.
                 </iframe>
             </span>
-        </section>
-
+            </section>
+        </div>
+   
     </div>
-</section>
+</article>
      
-     
-     
+<!--END LATEST WORK END -->     
     
-     <!-- Footer -->
-   <div class="navbar-fixed-bottom">
-      <h2 class="text-center"style="font-family:caveat">
-         "The stories we love best live in us forever"
-      </h2>
-     <div class="btn-list text-center">
-        <a style="background:#007bb5;color:white;"
-           class="btn btn-social-icon btn-linkedin" 
-           href="http://www.linkedin.com/in/saher-wasim--the-coder/">              
-           <span class="fa fa-linkedin"></span>   
-        </a>
-        <a style="background:black;color:white;" 
-           class="btn btn-social-icon btn-github" 
-           href="http://www.github.com/swasim">
-           <span class="fa fa-github"></span>
-        </a>
-        <a style="background:white;color:black;"
-           class="btn btn-social-icon btn-angellist" 
-           href="http://angel.co/saher-wasim ">
-           <span class="fa fa-angellist">
-        </a>
-        <a style="background: #dd4b39;color:white;"
-           class="btn btn-btn-social-icon btn-google"
-           href="#">
-           <span class="fa fa-google">
-        </a>
-        <p style="font-size:.3em">© SW 2017</p>
-     </div>   
+
+
+
+    
+<!------------ Footer ----------->
+<div>
+    <%- include partials/footer %>
 </div>
+<!---------- END FOOTER --------->  
+     
+     
+     
+     
+     
+     
+<!-- SCRIPTS -->  
 <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-
-  <%- include partials/scripts %>
+<%- include partials/scripts %>
 
 </body>        
 	  

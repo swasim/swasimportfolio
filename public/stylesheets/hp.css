@@ -60,11 +60,11 @@ nav{
 /*Page Two*/
 #pageTwo{
     width: 100%;
-    padding: 20px;
 }
+
+
 #pageTwo .wrapper{
    background-color:rgba(192,192,192,0.6);
-   height:100%;
    position: relative;
    text-decoration: none;
    text-align: center;
@@ -77,12 +77,11 @@ nav{
 /*Page Three*/
 #pageThree{
    position: relative;
-   padding: 20px;
-   height: 100%;
 }
 #pageThree .wrapper{
-   background-color:rgba(192,192,192,0.6);
-   height: 100%;
+   background-color:rgba(255,255,255,0.6);
+   position: relative;
+   height:75%;
    text-decoration: none;
    text-align: center;
    text-transform: uppercase;
@@ -91,7 +90,16 @@ nav{
    font-weight: 100;
 }
 
+/******LATEST PROJECTS*****/
+#rightApp{
+   float: right; 
+   width:45%;
+}
 
+#leftApp{
+   float: left; 
+   width:45%;
+}
 
 /* Buttons */
 .btn{
@@ -114,10 +122,36 @@ nav{
 }
 
 /******Styling********/
-.center{
-   padding:1em;
-   top: 50%;
-   left: 50%;
-   margin-right: -50%;
-   transform: translate(-50%, -50%);
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.center { 
+    height: 100%;
+    position: relative;
+}
+
+.center section {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+
+/******** SMALL SCREEN*********/
+@media only screen and (max-device-width: 480px){
+   #rightApp{
+      float: none; 
+      width:100%;
+   }
+
+   #leftApp{
+      float: none; 
+      width:100%;
+   }
+   
 }

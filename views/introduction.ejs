@@ -3,9 +3,12 @@
     <head>
         <%- include partials/head %>
         <link rel = "stylesheet" type="text/css" href= "/stylesheets/introduction.css">
-        <link rel = "stylesheet" type="text/css" href= "/stylesheets/introStyle.css">
-        
-        
+        <style>
+            #headerTop{
+                background-color:#fff;
+                color:#000;
+            }
+        </style>
     </head>
     
     <body id="document" style="overflow: visible;">
@@ -18,33 +21,7 @@
         <div id="status" style="display: none;"></div>
     </div>
     <!--NAVIGATION-->
-    <div id="navigation">
-        <div id="navbar" class="affix">
-            <!-- Navigation Inner -->
-            <div class="nav-inner">
-                <div class="">
-                    <!-- Site Logo -->
-                    <div class="site-logo">
-                        <a href="/" id="logo" class="scrol affix-logo">
-                            <!-- Your Logo -->
-                            My World
-                        </a>
-                    </div><!-- End Site Logo -->
-                    <a class="mini-nav-button dark"><i class="fa fa-bars"></i></a>
-                    <!-- Navigation Menu -->
-                    <div class="nav-menu">
-                        <ul class="nav">
-                            <li><a href="/">Home</a></li>
-                            <li><a href="/introduction">Introduction</a></li>
-                            <li><a href="/myworld">All About Me</a></li>
-                            <li><a href="/resume">Resume</a></li>
-                            <li><a href="/myprojects">Projects</a></li>
-                            <li><a href="/myblog">Blog</a></li>
-                            <li><a href="/contact">Contact</a></li>
-
-                        </ul>
-                    </div><!-- End Navigation Menu -->
-                </div><!-- End Navigation Inner -->
+    <%- include partials/header %>
             </div>
         </div>
 
