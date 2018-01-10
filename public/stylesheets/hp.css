@@ -22,6 +22,11 @@ h1{
     transition: all .3s ease-in-out;
 }
 
+.nameHeader{
+  color: white;
+  text-shadow: 2px 2px 2px;   
+}
+
 /*Nav */
 nav{
    font-family: 'Concert One',cursive;
@@ -77,11 +82,12 @@ nav{
 /*Page Three*/
 #pageThree{
    position: relative;
+   padding-top: 20px;
 }
+
 #pageThree .wrapper{
-   background-color:rgba(255,255,255,0.6);
+   background-color:rgba(175,175,175,0.5);
    position: relative;
-   height:75%;
    text-decoration: none;
    text-align: center;
    text-transform: uppercase;
@@ -90,15 +96,22 @@ nav{
    font-weight: 100;
 }
 
+
 /******LATEST PROJECTS*****/
 #rightApp{
    float: right; 
-   width:45%;
+   width:25%;
 }
 
 #leftApp{
    float: left; 
-   width:45%;
+   width:25%;;
+}
+#centerApp {
+   position: absolute;
+   left: 50%;
+   transform: translate(-50%, 0%); 
+   width:25%;
 }
 
 /* Buttons */
@@ -142,16 +155,5 @@ nav{
 }
 
 
-/******** SMALL SCREEN*********/
-@media only screen and (max-device-width: 480px){
-   #rightApp{
-      float: none; 
-      width:100%;
-   }
 
-   #leftApp{
-      float: none; 
-      width:100%;
-   }
-   
-}
+/******** SMALL SCREEN*********/

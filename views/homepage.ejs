@@ -1,11 +1,19 @@
 <head>
+    <meta name="Saher Wasim | Portfolio "
+          content="This the homepage of Saher's portfolio.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Caveat|Concert+One" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" >
     <link rel = "stylesheet" type="text/css" href= "/stylesheets/hp.css">
-    <title>Saher Wasim | Portfolio </title>
-    <style>
+    <link href="http://www.saherwasim.com" rel="canonical">
+    <title>Saher Wasim</title>
+   
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+    
+    <!-------HOMEPAGE BACKGROUND IMAGE------->
+    <style rel="nofollow">
         body{
            background: url(https://res.cloudinary.com/dlfsi4ilj/image/upload/v1514526948/sw_tu0get.jpg) no-repeat center center fixed;
            -webkit-background-size: cover;
@@ -16,8 +24,8 @@
 
     </style> 
 </head>
-
 <body>
+
 <%- include partials/header %>
 
 <!----------------- Page One----------------->
@@ -25,7 +33,8 @@
         <div class="container-fluid wrapper center">
             <section>
                 <div class='home'>
-                    <h1 class="text-center" style="font-size:3.0em;">Saher Wasim</h1>
+                    <h1 class="nameHeader" style="font-size:3.0em;">Saher Wasim</h1>
+                    <hr>
                     <h2 class="text-center">Frontend Developer</h2>
                 </div>
             </section>
@@ -33,10 +42,11 @@
     </article>
 
 <!--------------- Page Two (Intro)------------>
-<article id="pageTwo">
+<article id="pageTwo" style:"height:75%">
     <div class="container-fluid wrapper center">
          <section>
             <h2>Get to Node me!</h2>
+            <hr>
             <p style="font-size:18px">Web development, poetry, dogs, art, coffee, paint, the list goes one</p>
             <a class="btn" href"#">Get the full scoop</a>
         </section>
@@ -44,45 +54,72 @@
 </article>
    
 <!-- Page Three LATEST WORK -->
-<article id="pageThree">
-    <div class="container-fluid wrapper">
-   
-        <div id="leftApp" class="center clearfix">
-            <section>
-            <h2>Geo Tweet App</h2> 
-            <span>
-                <a href="https://geo-tweet.herokuapp.com/">
-                    <img height='228' 
+<div id="pageThree">
+    
+    <div class="container-fluid wrapper" style="padding:10px">
+        <h2>Latest Projects</h2>
+    <div id="#projectContainer" class="clearfix" style="padding: 20px;">
+        
+        <div id="leftApp">
+            <section style="border: black solid 2px;">
+            <a href="https://geo-tweet.herokuapp.com/"> 
+                <h2 style="text-decoration:none;color:white;cursor:pointer;font-size:.8em; margin:10px">Geo Tweet App</h2>
+                
+                <span>
+                    <img height='138' 
                      title='GeoTweet App' 
                      frameborder='no'
                      src='https://res.cloudinary.com/dlfsi4ilj/image/upload/v1515067120/geotweet_ta08yd.jpg'
                      allowtransparency='true' 
                      allowfullscreen='true'
-                     style='position: relative; width: 100%;'
+                     style='position: relative; width: 100%; padding-bottom:10px'
+                     class="container-fluid"
+                     rel="nofollow"/>
+                </span>
+                
+            </a>
+            </section>
+        </div>
+        
+        
+        <div id="centerApp">
+            <section style="border: black solid 2px;">
+            <a href="https://github.com/swasim/pinpoint">
+            <h2 style="text-decoration:none;color:white;cursor:pointer;font-size:.8em; margin:10px">PinPoint</h2>
+                <span>
+                    <img height='138' 
+                     title='PinPoint App' 
+                     frameborder='no'
+                     src='http://res.cloudinary.com/dlfsi4ilj/image/upload/v1515406249/pinpoint_gaysa8.jpg'
+                     allowtransparency='true' 
+                     allowfullscreen='true'
+                     style='position: relative; width: 100%; padding-bottom:10px'
                      class="container-fluid"/>
-                </a>
-            </span>
+                </span>
+            </a>
             </section>
         </div>
  
 
-        <div id="rightApp" class=" center clearfix">
-            <section>
-            <h2>To-Do App</h2>
-            <span>
-                <iframe height='228' 
-                        title='ToDo App' 
-                        src='//codepen.io/saherw22/embed/NXjRWg/?height=428&theme-id=dark&default-tab=js,result&embed-version=2' 
+        <div id="rightApp">
+            <section id="projectSection" style="border: black solid 2px">
+            <a href="https://codepen.io/saherw22/full/NXjRWg">
+            <h2 style="text-decoration:none;color:white;cursor:pointer;font-size:.8em; margin:10px">To-Do App</h2>
+                <span>
+                    <img height='138' 
+                        title='Todo App' 
                         frameborder='no' 
+                        src='http://res.cloudinary.com/dlfsi4ilj/image/upload/c_scale,w_1474/v1515407057/todo_bgodgj.jpg' 
                         allowtransparency='true' 
-                        style='position: relative; width: 100%;'
-                        class="container-fluid">
-                    <a href='https://codepen.io/saherw22/pen/NXjRWg/'>ToDo APP</a> by Saher (<a href='https://codepen.io/saherw22'>@saherw22</a>)</a>.
-                </iframe>
-            </span>
+                        allowfullscreen='true'
+                        style='position: relative; width: 100%; padding-bottom:10px'
+                        class="container-fluid"
+                        rel="nofollow"/>
+                </span>
+            </a>
             </section>
         </div>
-   
+    </div>
     </div>
 </article>
      
@@ -97,8 +134,7 @@
     <%- include partials/footer %>
 </div>
 <!---------- END FOOTER --------->  
-     
-     
+  
      
      
      
@@ -108,6 +144,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 <%- include partials/scripts %>
+
 
 </body>        
 	  
