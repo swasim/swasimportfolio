@@ -133,6 +133,12 @@ nav{
    background-color:grey;
    
 }
+#appButton .btn{
+   border:3px solid #E0CB77;
+   color: #fff;
+   background-color:grey;
+   
+}
 
 /******Styling********/
 .clearfix::after {
