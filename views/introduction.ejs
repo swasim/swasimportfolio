@@ -1,116 +1,217 @@
+homepage.ejs
 <!DOCTYPE html>
 <html>
-<head>
-    <%- include partials/head %>
-    <link rel = "stylesheet" type="text/css" href= "/stylesheets/introduction.css">
-    <style>
-        #headerTop{
-            background-color:#fff;
-            color:#000;
-        }
-    </style>
-</head>
+    <head>
+        <title>
+            Saher's Homepage
+        </title>
+        <%- include partials/head %>
+        <link rel = "stylesheet" type="text/css" href= "/stylesheets/offStyle.css">
+        <link rel = "stylesheet" type="text/css" href= "/stylesheets/homePageStyle.css">
+        
+    </head>
+    
     
 <body>
-   
-
-   
-    <!--PORTFOLIO SECTION-->
-    <div class="center">
-    <section>
-        <div class="clearfix">
-            <h2>PORTFOLIO</h2>
-        </div>
-                
-       <div id="pageThree">
-    
-    <div class="container-fluid wrapper" style="padding:10px">
-        <h2>Latest Projects</h2>
-    <div id="#projectContainer" class="clearfix" style="padding: 20px;">
+    <div id = "navbar">
+        <%- include partials/header %>
         
-        <div id="leftApp">
-            <section style="border: black solid 2px;">
-            <a href="https://geo-tweet.herokuapp.com/"> 
-                <h2 style="text-decoration:none;color:white;cursor:pointer;font-size:.8em; margin:10px">Geo Tweet App</h2>
-                
-                <span>
-                    <img height='238' 
-                     title='GeoTweet App' 
-                     frameborder='no'
-                     src='https://res.cloudinary.com/dlfsi4ilj/image/upload/v1515067120/geotweet_ta08yd.jpg'
-                     allowtransparency='true' 
-                     allowfullscreen='true'
-                     style='position: relative; width: 100%; padding-bottom:10px'
-                     class="container-fluid"
-                     rel="nofollow"/>
-                </span>
-                
-            </a>
-            </section>
-        </div>
-        
-        
-        <div id="centerApp">
-            <section style="border: black solid 2px;">
-            <a href="https://github.com/swasim/pinpoint">
-            <h2 style="text-decoration:none;color:white;cursor:pointer;font-size:.8em; margin:10px">PinPoint</h2>
-                <span>
-                    <img height='238' 
-                     title='PinPoint App' 
-                     frameborder='no'
-                     src='http://res.cloudinary.com/dlfsi4ilj/image/upload/v1515406249/pinpoint_gaysa8.jpg'
-                     allowtransparency='true' 
-                     allowfullscreen='true'
-                     style='position: relative; width: 100%; padding-bottom:10px'
-                     class="container-fluid"/>
-                </span>
-            </a>
-            </section>
-        </div>
- 
-
-        <div id="rightApp">
-            <section id="projectSection" style="border: black solid 2px">
-            <a href="https://codepen.io/saherw22/full/NXjRWg">
-            <h2 style="text-decoration:none;color:white;cursor:pointer;font-size:.8em; margin:10px">To-Do App</h2>
-                <span>
-                    <img height='238' 
-                        title='Todo App' 
-                        frameborder='no' 
-                        src='http://res.cloudinary.com/dlfsi4ilj/image/upload/c_scale,w_1474/v1515407057/todo_bgodgj.jpg' 
-                        allowtransparency='true' 
-                        allowfullscreen='true'
-                        style='position: relative; width: 100%; padding-bottom:10px'
-                        class="container-fluid"
-                        rel="nofollow"/>
-                </span>
-            </a>
-            </section>
-        </div>
     </div>
-</div>
+    <div id="page_container" >
+        <div id = page_content>
+            <div class="page_image page_bkg-light page_bkg-overlay navigator page_navbar-section page_section" style="
+            vertical-align: middle;
+            height: 579px;
+            background-image: url(/images/103844.jpg);
+            background-repeat: no-repeat; 
+            background-size: cover; 
+            background-color: transparent; 
+            background-position: 50% 50%;
+            -webkit-font-smoothing: antialiased;">
+                
+                <div class="imgcontainer">
+                    <div class="columns sixteen">
+                        <div class="backimpression">
+                            <div class="left">
+                                <div class= "page_onyxnew_pic">
+                                    <div class="page_component page_image">
+                                        <div>
+                                            <img src="/images/professionalPic.jpg" alt="" title="" class="crop-default" data-description="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class ="right">
+                                <div class = "header_text">
+                                    <div class ="page_title">
+                                        <h1 style="letter-spacing:2px;">
+                                            <p>Saher Wasim</p>
+                                        </h1>
+                                    </div>
+                                    <div class="page_subtitle">
+                                        <p style= "font-size: 30px; letter-spacing:2px;">
+                                            Frontend Engineer
+                                        </p>
+                                    </div>
+                                    <div id="button" style="padding:55px">
+                                        <a style =  "border:3px solid #fff;
+                                                     color: #000;
+                                                     font-size:20px;
+                                                     background-color:rgba(192,192,192,0.8);
+                                                     padding:7px" 
+                                            href="/introduction">
+                                            <span>Welcome To My Universe</span>
+                                        </a>
+                                    </div>
+                                </div>    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         
+        
+        <!-- Next Page Preview -->
+         <div>
+         <div id = page_content class ="page_content" style ="background-color: #f0f0ed; height:auto">
+            
+        	    
+                    <div style="margin:0 -45px;">
+        	            <table>
+        		            <tbody>
+        			            <tr>
+        			                
+        				    
+                            <div style="height:40px;"></div>
+    					            <div id="aboutMeHeader">
+                                        <div class="page_title-group page_only-title-group" style="text-align:left; float:left" >
+                                            <div class="page_title">
+                                                <h2 style ="font-size: 25px; letter-spacing:2px; text-transform: uppercase; font-weight: bold; font-family: lato,sans-serif;">
+                                                    <p style="margin-left: 50px; float:left; color:black">About Me</p>
+                                                </h2>
+                                            </div>
+                                        </div>    
+                                    </div>
+                                 
+        				        <td style="width:100.026223692949%; padding:0 115px;">
+    					            
+                                    
+    					            <div id="aboutMeText" style="color:black">
+                                        <h2 style="font-size:25px; letter-spacing:2px;">I'm Saher Wasim</h2>
+                                            <div style="height:25px;"></div>
+                                        <div class="paragraph" style="font-size: 15px; line-height: 1.35; letter-spacing:1.6px;">&#8203;Living in the heart of San Francisco, where, I have now been a frontend developer for 4 years! <br>&#8203;<br>&#8203;Wow! It has been 4 years already! I enjoy the relief I get when I solve problems,
+                                        big problems, small problems, any size the problem may be, I will solve it.<br>&#8203;<br>&#8203;What do I do for fun you ask?<br>&#8203;<br>&#8203;Well, when you don't see me solving problems, then you might just find me saving all the animals in the world! I LOVE DOGS!&nbsp;<br><br>&#8203;And, when I'm not being an animal super hero, you'll find me 
+                                        in some park sipping my mocha, drawing, writing spoken word, and enjoying the breeze!&nbsp;</div>
+                                    
+                                        <span>
+                                            <a class="learnbtn"style="background: #175C9D; line-height:8;" href="/introduction"><span>More About Me</span></a>
+                                        </span>
+                                    </div>    
+                                </td>
+                                <!-- END OF ABOUT ME SECTION -->
+                                <td style="width:13.418880272432%; padding:0 45px;"></td>
+        				        			
+        			        </tr>
+        		        </tbody>
+        	            </table>
+        	            <div style="height:25px;"></div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div style="height:25px;"></div>
+    <!-- Education-->
+        <%- include partials/homePageLayout/education %>
+    <!--End Education-->
     
-    <!--END PORTFOLIO SECTION-->
-    </section>
-    </div>
-
-
-	</body>
+    
+    
+    <div style="height: 50px; overflow: hidden;"></div>
+    
+    
+    <!-- QUOTE SECTION -->    
+        <div class="page_image page_bkg-light page_bkg-overlay navigator page_navbar-section page_section" style="
+                        vertical-align: middle;
+                        height: 290px;
+                        background-image: url(/images/alwaysbkgp.jpg);
+                        background-repeat: no-repeat;
+                        background-position: 50.00% 72.40%;
+                        background-size: 100%;
+                        background-color: transparent;">
+        <!-- react-text: 213 -->
+        <!-- /react-text -->
+          <div class="container-fluid">
+              <div class="sixteen columns" style="width: 40.236173935775%;padding:0 -45px;text-align: right; float: right;">
+              <div class="page_title-group page_only-title-group"  style ="text-align:right">
+                  <div class="page_subtitle">
+                      <div>
+                          <h4 style="font-size:22px; letter-spacing:2px;">
+                              <p>"The mind is not a book, to be opened at will and examined at leisure"</p>
+                              <p>&nbsp;</p>
+                          </h4>
+                      </div>
+                  </div>
+                  <div class="page_title">
+                      <div>
+                          <h2 style="font-size:20px; letter-spacing:2.5px; text-transform: uppercase; font-weight: bold; font-family: lato,sans-serif;">
+                              <p>~ Serverus Snape</p>
+                          </h2>
+                      </div>
+                  </div>
+              </div>
+              </div>
+          </div>
+        <!-- react-text: 223 -->
+        <!-- /react-text -->
+        </div>
+        
+    <!-- END QUOTE SECTION -->            
+     
+        <div style="height: 30px; overflow: hidden;"></div>    
+         
+         
          
             
         <!------------ Footer ----------->
            
-        <div>
+        <div class="container-fluid" style="color:black">
             <%- include partials/footer %>
         </div>
 
         <!---------- END FOOTER --------->
-    
-        
-        
-        
-        <%- include partials/scripts %>   
+ 
+    </div>        
+</div>
+
+
+
+
+		
+<%- include partials/scripts %>
+<script>
+            $(window).scroll(function() {
+            // 100 = The point you would like to fade the nav in.
+              
+            	if ($(window).scrollTop() < 200){
+                
+             		$('.topbar').addClass('show');
+                
+              } else {
+                
+                $('.topbar').removeClass('show');
+                
+             	};   	
+            });
+            
+            $('.scroll').on('click', function(e){		
+            		e.preventDefault()
+                
+              $('html, body').animate({
+                  scrollTop : $(this.hash).offset().top
+                }, 1000);
+            });
+        </script>
     </body>
 </html>    
-                    						       
