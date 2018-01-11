@@ -1,34 +1,7 @@
-<!--<body>
-       <h1>Contact Me</h1>
-      <form action="/contact" method="post" enctype="multipart/form-data">
-       
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" placeholder="Enter your full name"  />
-            <br />
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email address"  />
-            <br />
-            <label for="description">Description:</label>
-            <textarea id="description" name="description" placeholder="Enter a short description about yourself"></textarea>
-            <br />
-            <input type="submit" value="Send Message" />
-       
-      </form>-->
-<!DOCTYPE html>
 <html lang="en">
 <head>
-  
-  <%- include ./partials/head %>
-
-</head>
-      
-      
-      
-      
-      
-      
-<body>
-<style>
+    <%- include ./partials/head %>
+    <style>
     * {
         margin:0;
         padding:0;
@@ -47,8 +20,8 @@
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
-        height:800px;
-        color:white;
+        height:100%;
+        color:#444;
         font-family: 'Concert One', cursive;
     
     }
@@ -70,16 +43,17 @@
     }
     
     #contactform {
+        padding:10%;
+        width:50%;
+
+        margin:right:25%;
+        margin-left:25%;
         text-shadow:0 1px 0 #FFF;
         border-radius:4px;
         -webkit-border-radius:4px;
         -moz-border-radius:4px;
         background:#F9F9F9;
-        padding:25px;
-        max-width:500px;
-        width:95%;
-        margin:0 auto;
-        position:relative;
+        
     }
     #contactform header {
         color:#991D57;
@@ -92,7 +66,6 @@
         cursor:pointer;
         color:#991D57;
         display:block;
-        margin:5px 0;
         font-weight:900;
     }
     #contactform input[type="text"],
@@ -117,7 +90,7 @@
         border:1px solid #AAA;
     }
     #contactform textarea {
-        height:100px;
+        height:10%;
         max-width:100%;
     }
     #contactform button[type="submit"] {
@@ -163,49 +136,50 @@
         }
 
 </style>
-
-
-
+</head>
+ 
+      
+<body>
     <div id = "navbar">
         <%- include partials/header %>
     </div>
-    <div style="height:150px;"></div>
-	<br class="wrapper">
-		<br id="main" style="padding:50px 0 0 0;">
-		
-		<!-- Form -->
-		<form id="contactform" action="/contact" method="post">
-		   <header>Lets get in touch!</header>
-		    <div style= "text-align: center; line-height: 2;">
-    			<br>
-    				<label>
-    					<span>Name: (required)</span>
-    					<input placeholder="Please enter your name" name ="name" type="text" tabindex="1" required autofocus>
-    				</label>
-    			</br>
-    			<br>
-    				<label>
-    					<span>Email: (required)</span>
-    					<input placeholder="Please enter your email address" name = "email" type="email" tabindex="2" required>
-    				</label>
-    			</br>
-    			<br>
-    				<label>
-    					<span>Message: (required)</span>
-    					<textarea placeholder="Include all the details you can" name = "message"tabindex="5" required></textarea>
-    				</label>
-    			</br>
-    			<br>
-    				<button name="submit" type="submit" id="contactsubmit">Send Email</button>
-    			</br>
-			</div>
-		</form>
-		<!-- /Form -->
-		
-		</br>
-	</br>
-	<div style="height:100px;"></div>
-	
+    
+<div style="margin-top:10%;height:100%">		
+    <!-- Form -->
+    <form style="height:100%" id="contactform" action="/contact" method="post" >
+       <header>Lets get in touch!</header>
+        <div style= "text-align: center; line-height:2;">
+    		<div>
+    			<label>
+    				<span>Name: (required)</span>
+    				<input placeholder="Please enter your name" name ="name" type="text" tabindex="1" required autofocus>
+    			</label>
+    		</div>
+    		<div>
+    			<label>
+    				<span>Email: (required)</span>
+    				<input placeholder="Please enter your email address" name = "email" type="email" tabindex="2" required>
+    			</label>
+    		</div>
+    		<div>
+    			<label>
+    				<span>Message: (required)</span>
+    				<textarea placeholder="Include all the details you can" name = "message"tabindex="5" required></textarea>
+    			</label>
+    		</div>
+    		<div>
+    			<button name="submit" type="submit" id="contactsubmit">Send Email</button>
+    		</div>
+    	</div>
+    </form>
+    </div>
+    <!-- /Form -->
+<!------------ Footer ----------->
+<text style="color:white">
+    <%- include partials/footer %>
+</text>
+<!---------- END FOOTER --------->  
+
 	<script>
 	   (function() {
 
