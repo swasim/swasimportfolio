@@ -1,5 +1,8 @@
 <html lang="en">
 <head>
+    <script type='text/javascript'>
+        window.location.replace("http://www.saherwasim.com/projects");
+    </script>
     <%- include partials/head %>
     <style>
         body {
@@ -16,50 +19,84 @@
 <body>
 
 	<%- include partials/header %>
-	
 	<div class="container-fluid content-padding">
+	<h1 style="margin-top:7%; text-align:center; font-size:2.5em;">My Projects!</h1>    
 	<!-------------Geotweet App------------->
-        <h1 style="margin-top:10%; text-align:center; font-size:2.5em;">My Projects!</h1>    
-            
-            <div style= "margin-left: 25%; margin-right:25%; margin-top:5%; text-align:center;">
+      <div class="row">
+        <div class="col-lg-6 portfolio-item" style="float:left;">
+          <div class="card h-100"> 
+          
+            <div style= "margin-left: 22%; margin-top:10%; text-align:center;">
                 <h2>Geo Tweet App</h2>
                 <a href="https://geo-tweet.herokuapp.com/">
                 <img height='228' 
-             
-                 title='GeoTweet App' 
-                 frameborder='no'
-                 src='https://res.cloudinary.com/dlfsi4ilj/image/upload/v1515067120/geotweet_ta08yd.jpg'
-                 allowtransparency='true' 
-                 allowfullscreen='true' 
-                 style="width:100%;box-shadow:1px 1px 60px grey;"/>
+                     title='GeoTweet App' 
+                     frameborder='no'
+                     src='https://res.cloudinary.com/dlfsi4ilj/image/upload/v1515067120/geotweet_ta08yd.jpg'
+                     allowtransparency='true' 
+                     allowfullscreen='true' 
+                     style="width:100%;box-shadow:1px 1px 60px grey;"/>
                  </a>
-                 <article style="margin-top:2%">
+                 <article style="margin-top:5%">
                     <a href="https://geo-tweet.herokuapp.com/">
             		  <button href="https://geo-tweet.herokuapp.com/" style="color:black;" id ="appButton"class="btn">View Full App</button>
             		</a>
             	</articl>	
             </div>
+          </div>
+        </div>
+        
     <!-------------Beats This App------------->
-    <div style= "margin-left: 25%; margin-right:25%; margin-top:5%;width: 50%; text-align:center;">
+        <div class="col-lg-6 portfolio-item" style="float:right;">
+          <div class="card h-100">
+            <div style= " margin-right:22%; margin-top:10%; text-align:center;">
                 <h2>Beat This </h2>
-                 <iframe height='228' 
+                <a href = "https://github.com/swasim/beatThis/" >
+                <img height='228' 
                          scrolling='no' 
-                         title='ToDo App' 
+                         title='Beat This' 
                          src='https://res.cloudinary.com/dlfsi4ilj/image/upload/c_fit,w_528/v1518099118/beatThis.jpg' 
                          frameborder='no' 
                          allowtransparency='true' 
                          allowfullscreen='true' 
                          style="width:100%;box-shadow:1px 1px 60px grey;"/>
-                    <a href='https://github.com/swasim/beatThis/'>Beat This</a> by Saher</a>.
-                </iframe>
-                <article style="margin-top:2%">
+                </a>   
+                <article style="margin-top:5%">
                     <a href = "https://github.com/swasim/beatThis/" >
-            		    <button style="color:black" id ="appButton"class="btn">View Full App</button>
-            		</a>
-        		</article>
-		    </div>
+            		      <button href = "https://github.com.swasim/beatThis/" style="color:black;" id ="appButton"class="btn">View Full App</button>
+            		    </a>
+        		    </article>
+		          </div>
+		        </div>
+          </div>
+    <!-------------PinPoint------------->
+          <div class="col-lg-6 portfolio-item" style="float:left;">
+            <div class="card h-100">
+              <div style= "margin-left: 22%; margin-top:10%; text-align:center;">
+                <h2>PinPoint</h2>
+                <a href = "https://github.com/swasim/pinpoint/" >
+                <img height='228' 
+                         scrolling='no' 
+                         title='ToDo App' 
+                         src='http://res.cloudinary.com/dlfsi4ilj/image/upload/v1515406249/pinpoint_gaysa8.jpg' 
+                         frameborder='no' 
+                         allowtransparency='true' 
+                         allowfullscreen='true' 
+                         style="width:100%;box-shadow:1px 1px 60px grey;"/>
+                </a>
+                <article style="margin-top:5%">
+                    <a href = "https://github.com/swasim/pinpoint/" >
+            		        <button href="https://github.com/swasim/pinpoint/"style="color:black" id ="appButton"class="btn">View Full App</button>
+            		    </a>
+        		    </article>
+		          </div>
+            </div>
+         </div>
+   
     <!-------------To-Do App------------->
-            <div style= "margin-left: 25%; margin-right:25%; margin-top:5%;width: 50%; text-align:center;">
+          <div class="col-lg-6 portfolio-item" style="float:right;">
+            <div class="card h-100">
+              <div style= "margin-right:22%; margin-top:10%;text-align:center;">
                 <h2>To-Do App </h2>
                  <iframe height='228' 
                          scrolling='no' 
@@ -71,14 +108,15 @@
                          style="width:100%;box-shadow:1px 1px 60px grey;"/>
                     <a href='https://codepen.io/saherw22/pen/NXjRWg/'>ToDo APP</a> by Saher (<a href='https://codepen.io/saherw22'>@saherw22</a>)</a>.
                 </iframe>
-                <article style="margin-top:2%">
+                <article style="margin-top:5%">
                     <a href = "https://codepen.io/saherw22/pen/NXjRWg/" >
-            		    <button style="color:black" id ="appButton"class="btn">View Full App</button>
-            		</a>
-        		</article>
-		    </div>
-    </div>
-   
+            		        <button style="color:black" id ="appButton"class="btn">View Full App</button>
+            		    </a>
+        		    </article>
+		          </div>
+            </div>
+         </div>
+       </div>
 
 
 <!------------ Footer ----------->
@@ -96,8 +134,7 @@
 <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-
-  <%- include partials/scripts %>
+<%- include partials/scripts %>
 
 </body>
 </html>
