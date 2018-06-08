@@ -72,6 +72,9 @@ exports.projectDNA = function (req, res) {
     res.render("projectDNA");
 };
 
+exports.projectDesign = function (req, res) {
+    res.render("projectDesign");
+};
 
 /*
 exports.myprojects = function(req, res) {

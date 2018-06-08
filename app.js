@@ -35,6 +35,7 @@ app.get('/myprojects', routes.myprojects);
 app.get('/myprojects/:projectNumber?', routes.myprojects);
 
 app.get('/projectDNA', routes.projectDNA);
+app.get('/projectDesign', routes.projectDesign);
 
 app.get('/contact', routes.contactme);
 app.post('/contact', urlencodedParser, routes.contactSuccess);
