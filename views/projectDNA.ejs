@@ -1,0 +1,457 @@
+<html lang="en">
+<head>
+    <script type='text/javascript'>
+       
+    </script>
+    <%- include partials/head %>
+   
+
+<style>
+        body, html {
+  background: #111;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.container {
+  perspective: 100%;
+  position: absolute;
+  left:25%;
+  margin-top: 2%;
+  transform-style: preserve-3d;
+}
+
+.dna {
+  position: absolute;
+  width: 10%;
+  animation: dna-spin 3s infinite linear both;
+  transform-style: preserve-3d;
+}
+
+.dnaStrand {
+  width: 100px;
+  transform: translateX(-50%);
+  height: 2px;
+  background: rgba(255, 255, 255, 0.3);
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.dnaStrand:nth-child(50) {
+  top: 400px;
+  transform: translateX(-50%) rotateY(750deg);
+}
+
+.dnaStrand:nth-child(49) {
+  top: 392px;
+  transform: translateX(-50%) rotateY(735deg);
+}
+
+.dnaStrand:nth-child(48) {
+  top: 384px;
+  transform: translateX(-50%) rotateY(720deg);
+}
+
+.dnaStrand:nth-child(47) {
+  top: 376px;
+  transform: translateX(-50%) rotateY(705deg);
+}
+
+.dnaStrand:nth-child(46) {
+  top: 368px;
+  transform: translateX(-50%) rotateY(690deg);
+}
+
+.dnaStrand:nth-child(45) {
+  top: 360px;
+  transform: translateX(-50%) rotateY(675deg);
+}
+
+.dnaStrand:nth-child(44) {
+  top: 352px;
+  transform: translateX(-50%) rotateY(660deg);
+}
+
+.dnaStrand:nth-child(43) {
+  top: 344px;
+  transform: translateX(-50%) rotateY(645deg);
+}
+
+.dnaStrand:nth-child(42) {
+  top: 336px;
+  transform: translateX(-50%) rotateY(630deg);
+}
+
+.dnaStrand:nth-child(41) {
+  top: 328px;
+  transform: translateX(-50%) rotateY(615deg);
+}
+
+.dnaStrand:nth-child(40) {
+  top: 320px;
+  transform: translateX(-50%) rotateY(600deg);
+}
+
+.dnaStrand:nth-child(39) {
+  top: 312px;
+  transform: translateX(-50%) rotateY(585deg);
+}
+
+.dnaStrand:nth-child(38) {
+  top: 304px;
+  transform: translateX(-50%) rotateY(570deg);
+}
+
+.dnaStrand:nth-child(37) {
+  top: 296px;
+  transform: translateX(-50%) rotateY(555deg);
+}
+
+.dnaStrand:nth-child(36) {
+  top: 288px;
+  transform: translateX(-50%) rotateY(540deg);
+}
+
+.dnaStrand:nth-child(35) {
+  top: 280px;
+  transform: translateX(-50%) rotateY(525deg);
+}
+
+.dnaStrand:nth-child(34) {
+  top: 272px;
+  transform: translateX(-50%) rotateY(510deg);
+}
+
+.dnaStrand:nth-child(33) {
+  top: 264px;
+  transform: translateX(-50%) rotateY(495deg);
+}
+
+.dnaStrand:nth-child(32) {
+  top: 256px;
+  transform: translateX(-50%) rotateY(480deg);
+}
+
+.dnaStrand:nth-child(31) {
+  top: 248px;
+  transform: translateX(-50%) rotateY(465deg);
+}
+
+.dnaStrand:nth-child(30) {
+  top: 240px;
+  transform: translateX(-50%) rotateY(450deg);
+}
+
+.dnaStrand:nth-child(29) {
+  top: 232px;
+  transform: translateX(-50%) rotateY(435deg);
+}
+
+.dnaStrand:nth-child(28) {
+  top: 224px;
+  transform: translateX(-50%) rotateY(420deg);
+}
+
+.dnaStrand:nth-child(27) {
+  top: 216px;
+  transform: translateX(-50%) rotateY(405deg);
+}
+
+.dnaStrand:nth-child(26) {
+  top: 208px;
+  transform: translateX(-50%) rotateY(390deg);
+}
+
+.dnaStrand:nth-child(25) {
+  top: 200px;
+  transform: translateX(-50%) rotateY(375deg);
+}
+
+.dnaStrand:nth-child(24) {
+  top: 192px;
+  transform: translateX(-50%) rotateY(360deg);
+}
+
+.dnaStrand:nth-child(23) {
+  top: 184px;
+  transform: translateX(-50%) rotateY(345deg);
+}
+
+.dnaStrand:nth-child(22) {
+  top: 176px;
+  transform: translateX(-50%) rotateY(330deg);
+}
+
+.dnaStrand:nth-child(21) {
+  top: 168px;
+  transform: translateX(-50%) rotateY(315deg);
+}
+
+.dnaStrand:nth-child(20) {
+  top: 160px;
+  transform: translateX(-50%) rotateY(300deg);
+}
+
+.dnaStrand:nth-child(19) {
+  top: 152px;
+  transform: translateX(-50%) rotateY(285deg);
+}
+
+.dnaStrand:nth-child(18) {
+  top: 144px;
+  transform: translateX(-50%) rotateY(270deg);
+}
+
+.dnaStrand:nth-child(17) {
+  top: 136px;
+  transform: translateX(-50%) rotateY(255deg);
+}
+
+.dnaStrand:nth-child(16) {
+  top: 128px;
+  transform: translateX(-50%) rotateY(240deg);
+}
+
+.dnaStrand:nth-child(15) {
+  top: 120px;
+  transform: translateX(-50%) rotateY(225deg);
+}
+
+.dnaStrand:nth-child(14) {
+  top: 112px;
+  transform: translateX(-50%) rotateY(210deg);
+}
+
+.dnaStrand:nth-child(13) {
+  top: 104px;
+  transform: translateX(-50%) rotateY(195deg);
+}
+
+.dnaStrand:nth-child(12) {
+  top: 96px;
+  transform: translateX(-50%) rotateY(180deg);
+}
+
+.dnaStrand:nth-child(11) {
+  top: 88px;
+  transform: translateX(-50%) rotateY(165deg);
+}
+
+.dnaStrand:nth-child(10) {
+  top: 80px;
+  transform: translateX(-50%) rotateY(150deg);
+}
+
+.dnaStrand:nth-child(9) {
+  top: 72px;
+  transform: translateX(-50%) rotateY(135deg);
+}
+
+.dnaStrand:nth-child(8) {
+  top: 64px;
+  transform: translateX(-50%) rotateY(120deg);
+}
+
+.dnaStrand:nth-child(7) {
+  top: 56px;
+  transform: translateX(-50%) rotateY(105deg);
+}
+
+.dnaStrand:nth-child(6) {
+  top: 48px;
+  transform: translateX(-50%) rotateY(90deg);
+}
+
+.dnaStrand:nth-child(5) {
+  top: 40px;
+  transform: translateX(-50%) rotateY(75deg);
+}
+
+.dnaStrand:nth-child(4) {
+  top: 32px;
+  transform: translateX(-50%) rotateY(60deg);
+}
+
+.dnaStrand:nth-child(3) {
+  top: 24px;
+  transform: translateX(-50%) rotateY(45deg);
+}
+
+.dnaStrand:nth-child(2) {
+  top: 16px;
+  transform: translateX(-50%) rotateY(30deg);
+}
+
+.dnaStrand:nth-child(1) {
+  top: 8px;
+  transform: translateX(-50%) rotateY(15deg);
+}
+
+.dnaStrand:after, .dnaStrand:before {
+  position: absolute;
+  top: -20px;
+  width: 10px;
+  height: 10px;
+  border-radius: 30%;
+  content: "";
+}
+
+.dnaStrand:after {
+  left: 100%;
+  background: #ff0000;
+  transform: rotateY(90deg);
+}
+
+.dnaStrand:before {
+  right: 100%;
+  background: #00aced;
+  transform: rotateY(-90deg);
+}
+
+@keyframes counter-spin-dot {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(-359deg);
+  }
+}
+@keyframes dna-spin {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(359deg);
+  }
+}
+</style>
+</head>
+<body>
+<%- include partials/header %>
+<h2 style="margin-top:5%;margin-left:5%;color:white">DNA Strand</h2>
+<div class="container-fluid">
+    <div class="container">
+      <div class="dna">
+        <div class="dnaStrand"></div>
+        <div class="dnaStrand"></div>
+        <div class="dnaStrand"></div>
+        <div class="dnaStrand"></div>
+        <div class="dnaStrand"></div>
+        <div class="dnaStrand"></div>
+        <div class="dnaStrand"></div>
+        <div class="dnaStrand"></div>
+        <div class="dnaStrand"></div>
+        <div class="dnaStrand"></div>
+        <div class="dnaStrand"></div>
+        <div class="dnaStrand"></div>
+        <div class="dnaStrand"></div>
+        <div class="dnaStrand"></div>
+        <div class="dnaStrand"></div>
+        <div class="dnaStrand"></div>
+        <div class="dnaStrand"></div>
+        <div class="dnaStrand"></div>
+        <div class="dnaStrand"></div>
+        <div class="dnaStrand"></div>
+        <div class="dnaStrand"></div>
+        <div class="dnaStrand"></div>
+        <div class="dnaStrand"></div>
+        <div class="dnaStrand"></div>
+        <div class="dnaStrand"></div>
+        <div class="dnaStrand"></div>
+        <div class="dnaStrand"></div>
+        <div class="dnaStrand"></div>
+        <div class="dnaStrand"></div>
+        <div class="dnaStrand"></div>
+        <div class="dnaStrand"></div>
+        <div class="dnaStrand"></div>
+        <div class="dnaStrand"></div>
+        <div class="dnaStrand"></div>
+        <div class="dnaStrand"></div>
+        <div class="dnaStrand"></div>
+        <div class="dnaStrand"></div>
+        <div class="dnaStrand"></div>
+        <div class="dnaStrand"></div>
+        <div class="dnaStrand"></div>
+        <div class="dnaStrand"></div>
+        <div class="dnaStrand"></div>
+        <div class="dnaStrand"></div>
+        <div class="dnaStrand"></div>
+        <div class="dnaStrand"></div>
+        <div class="dnaStrand"></div>
+        <div class="dnaStrand"></div>
+      </div>
+    </div>
+</div>  
+
+
+
+
+	
+<!------------ Footer ----------->
+           
+<div style="font-size:.5em;color:white;margin-left:70%;margin-top:32%">
+    <!-- Footer -->
+<span>
+    <style>
+        /* Buttons */
+        .btn{
+           cursor: pointer;
+        }
+        .btn:hover {
+            opacity: 0.6;
+        }
+        .btn-list .btn{
+           text-align: center;
+           text-decoration: none;
+           border-radius: 50%;
+        }
+    </style>
+  <div style="height:40px;"></div>
+            
+     <div class="navbar-bottom">
+        <h4 class="text-center"style="font-family:caveat">
+         "The stories we love best live in us forever"
+        </h4>
+        <div class="btn-list text-center">
+         
+        <a style="background:#007bb5;color:white;"
+           class="btn btn-social-icon btn-linkedin" 
+           href="http://www.linkedin.com/in/saher-wasim--the-coder/">              
+           <span class="fa fa-linkedin"></span>   
+        </a>
+        <a style="background:black;color:white;" 
+           class="btn btn-social-icon btn-github" 
+           href="http://www.github.com/swasim">
+           <span class="fa fa-github"></span>
+        </a>
+        <a style="background:white;color:black;"
+           class="btn btn-social-icon btn-angellist" 
+           href="http://angel.co/saher-wasim ">
+           <span class="fa fa-angellist">
+        </a>
+        <a style="background: #dd4b39;color:white;"
+           class="btn btn-btn-social-icon btn-google"
+           href="#">
+           <span class="fa fa-google">
+        </a>
+        <p style="font-size:.7em">© SW 2017</p>
+     </div>  
+   
+</span>
+</div>
+
+<!---------- END FOOTER --------->    
+    
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+    <%- include partials/scripts %>
+
+</body>
+</html>

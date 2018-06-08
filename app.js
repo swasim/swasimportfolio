@@ -1,5 +1,7 @@
 const express = require( 'express' );
 const http = require( 'http' );
+const apiRouter= require('./api');
+
 const bodyParser = require('body-parser');
 const assert = require('assert');
 
@@ -12,14 +14,15 @@ const port = process.env.PORT;
 const app = express();
 
 // locating files
-var routes = require("./routes");
+const routes = require("./routes");
 
 app.set('views','./views');
 app.set('view engine', 'ejs');
 
+//app.use('/api', apiRouter);
+const path = require('path');
+app.use(express.static(path.join('public')));
 
-var path = require('path');
-app.use(express.static(path.join(__dirname, 'public')));
 
 
 //routes
@@ -31,6 +34,8 @@ app.get('/myblog', routes.myBlog);
 app.get('/myprojects', routes.myprojects);
 app.get('/myprojects/:projectNumber?', routes.myprojects);
 
+app.get('/projectDNA', routes.projectDNA);
+
 app.get('/contact', routes.contactme);
 app.post('/contact', urlencodedParser, routes.contactSuccess);
 app.get('/contactSuccess',urlencodedParser, routes.contactSuccess);
@@ -38,7 +43,7 @@ app.get('/contactSuccess',urlencodedParser, routes.contactSuccess);
 //not found
 app.get('*', routes.notFound);
 
-
 app.listen(process.env.PORT, process.env.IP || '0.0.0.0' );
+
 
 

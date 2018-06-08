@@ -5,7 +5,8 @@ const mongodb = require('mongodb');
 const MongoClient =  require('mongodb').MongoClient;
 const dataURL = process.env.MONGOLAB_URI; 
 const app = express();
-
+// const homepage = require('./homepage.js');
+// const resume = require('./resume.js');
 
 //MongoDB setup
 app.use(bodyParser.urlencoded({ extended: false })) 
@@ -13,24 +14,25 @@ app.use(bodyParser.json());
 
 exports.homepage = function (req, res) {
     //var projects = projectsJSON.projects;
-    res.render("homepage");
+   
+    return res.render("homepage");
 };
 
 
 exports.resume = function (req, res) {
-    res.render("resume");
+    return res.render("resume");
 };
 
 exports.introduction = function (req, res) {
-    res.render("introduction");
+    return res.render("introduction");
 };
 
 exports.myworld = function (req, res) {
-    res.render("myworld");
+    return res.render("myworld");
 };
 
 exports.myBlog = function (req, res) {
-    res.render("myBlog");
+    return res.render("myBlog");
 };
 
 exports.contactme = function(req, res, next){
@@ -66,6 +68,9 @@ exports.myprojects = function (req, res) {
     res.render("myprojects");
 };
 
+exports.projectDNA = function (req, res) {
+    res.render("projectDNA");
+};
 
 
 /*
