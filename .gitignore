@@ -114,3 +114,9 @@ pip-selfcheck.json
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+public/styles
+.DS_Store
+.editorconfig
+.env
+.npm
