@@ -34,7 +34,7 @@ app.use(express.static(path.join('public')));
 
 //routes
 app.get('/', routes.homepage);
-app.get('saherwasim.com/introduction', routes.introduction);
+app.get('/introduction', routes.introduction);
 app.get('/myworld', routes.myworld);
 app.get('/resume', routes.resume);
 app.get('/myblog', routes.myBlog);
