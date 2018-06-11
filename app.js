@@ -34,7 +34,7 @@ app.use(express.static(path.join('public')));
 
 //routes
 app.get('/', routes.homepage);
-app.get('/introduction', routes.introduction);
+app.get('saherwasim.com/introduction', routes.introduction);
 app.get('/myworld', routes.myworld);
 app.get('/resume', routes.resume);
 app.get('/myblog', routes.myBlog);
@@ -53,17 +53,17 @@ app.get('*', routes.notFound);
 
 // For production (Heroku) http:// requests, redirect to https://
 // if (app.get('env') === 'production') {
-    //     app.get((req, res, next) => {
-    //         if (req.header('X-Forwarded-Proto') !== 'https') {
-    //             res.redirect(`https://${req.header('host').replace(/^www\./, '')}${req.url}`)
-    //         }
-    //         else {
-    //             next()
-    //         }
-    //     })
-    // }
+//     app.get((req, res, next) => {
+//         if (req.header('X-Forwarded-Proto') !== 'https') {
+//             res.redirect(`https://${req.header('host').replace(/^www\./, '')}${req.url}`)
+//         }
+//         else {
+//             next()
+//         }
+//     })
+// }
 
-const forceSSL = function() { 
+const forceSSL = function() {
     return function(req, res, next) {
         if (req.headers['x-forwarded-proto'] !== 'https') {
             return res.redirect(
