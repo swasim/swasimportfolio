@@ -14,7 +14,7 @@ const PORT = process.env.PORT || 3000
 
 const dataURL = process.env.MONGOLAB_URI;
 const MongoClient = require('mongodb').MongoClient;
-const urlencodedParser = bodyParser.urlencoded({ extended: false });
+const urlencodedParser = bodyParser.urlencoded({ extended: true });
 const jsonParser = bodyParser.json();
 
 const port = process.env.PORT;
