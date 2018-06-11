@@ -55,13 +55,13 @@ var qStr = uHref.split('?x=')[1];
 
 	if(qStr == 'sm') {
 		if(uPath.split('/').length > 2){
-			location.assign('https://' + uHost + '/' + uPath.split("/")[2].toLowerCase());
+			location.assign('https://' + 'saherwasim.com' + '/' + uPath.split("/")[2].toLowerCase());
 		} else {
 			errEle.style.opacity = '1';
 			loading.style.opacity = '0';
 		}
 	} else {
-		location.assign(uHref.toLowerCase() + '?x=sm');
+		location.assign(uHref.toLowerCase());
 	}
 </script>
 
