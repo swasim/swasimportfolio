@@ -9,7 +9,7 @@ const app = express();
 // const resume = require('./resume.js');
 
 //MongoDB setup
-app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json());
 
 // exports.homepage = function(req, res) {
@@ -66,16 +66,16 @@ exports.contactSuccess = function(req, res, next) {
 
 // exports.myprojects = function(req, res) {
 
-        //     res.render("myprojects");
-        // };
+//     res.render("myprojects");
+// };
 
-        // exports.projectDNA = function(req, res) {
-        //     res.render("projectDNA");
-        // };
+// exports.projectDNA = function(req, res) {
+//     res.render("projectDNA");
+// };
 
-        // exports.projectDesign = function(req, res) {
-        //     res.render("projectDesign");
-        // };
+// exports.projectDesign = function(req, res) {
+//     res.render("projectDesign");
+// };
 
 /*
 exports.myprojects = function(req, res) {

@@ -26,12 +26,12 @@
                   <a class="navbar-brand" href="/" class="navbutton">Saher Wasim</a>
              </div>
              <div class="collapse navbar-collapse" id="myNavbar">
-                  <ul class="nav navbar-nav navbar-right">
-                     <li class="navbutton active"><a href="/" onclick="active(this)">Home</a></li>
-                     <li class="navbutton"><a href="/introduction" id="intro"onclick="active(this)">About Me</a></li>         
-                     <li class="navbutton"><a href="/myprojects" onclick="active(this)">Projects</a></li>     
-                     <li class="navbutton"><a href="/resume" onclick="active(this)">Resume</a></li>
-                     <li class="navbutton"><a href="/contact" onclick="active(this)">Contact Me</a></li>
+                  <ul class="nav navbar-nav navbar-right" id="navul">
+                     <li class="navbutton"><a href="/">Home</a></li>
+                     <li class="navbutton"><a href="/introduction" id="intro">About Me</a></li>         
+                     <li class="navbutton"><a href="/myprojects">Projects</a></li>     
+                     <li class="navbutton"><a href="/resume">Resume</a></li>
+                     <li class="navbutton"><a href="/contact">Contact Me</a></li>
                   </ul>
              </div>                      
         </div>
@@ -40,7 +40,7 @@
     </header>
     <script>
         // Add active class to the current button (highlight it)
-        var header = document.getElementByTagName("ul");
+        var header = document.getElementById("navul");
         var btns = header.getElementsByClassName("navbutton");
         for (var i = 0; i < btns.length; i++) {
           btns[i].addEventListener("click", function() {

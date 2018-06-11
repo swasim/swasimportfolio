@@ -14,7 +14,7 @@ const PORT = process.env.PORT || 3000
 
 const dataURL = process.env.MONGOLAB_URI;
 const MongoClient = require('mongodb').MongoClient;
-const urlencodedParser = bodyParser.urlencoded({ extended: true });
+const urlencodedParser = bodyParser.urlencoded({ extended: false });
 const jsonParser = bodyParser.json();
 
 const port = process.env.PORT;
@@ -29,10 +29,10 @@ app.set('view engine', 'ejs');
 const path = require('path');
 
 
-if (process.env.NODE_ENV === 'production') {
-    app.use(express.static(path.join('public')));
-}
-
+// if (process.env.NODE_ENV === 'production') {
+    //     app.use(express.static(path.join('public')));
+    // }
+app.use(express.static(path.join('public')));
 
 //routes
 app.get('/', (req, res) => {
