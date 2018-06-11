@@ -45,7 +45,25 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" >
 <link rel = "stylesheet" type="text/css" href= "/stylesheets/hp.css">
  
+<script>
+var uHost = location.hostname;
+var uPath = location.pathname;
+var uHref = location.href;
+var errEle = document.getElementById('error-div');
+var loading = document.getElementById('loading');
+var qStr = uHref.split('?x=')[1];
 
+	if(qStr == 'sm') {
+		if(uPath.split('/').length > 2){
+			location.assign('https://' + uHost + '/' + uPath.split("/")[2].toLowerCase());
+		} else {
+			errEle.style.opacity = '1';
+			loading.style.opacity = '0';
+		}
+	} else {
+		location.assign(uHref.toLowerCase() + '?x=sm');
+	}
+</script>
 
 
 
