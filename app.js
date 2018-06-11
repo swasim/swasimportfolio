@@ -36,7 +36,9 @@ if (process.env.NODE_ENV === 'production') {
 
 
 //routes
-app.get('/', routes.homepage);
+app.get('/', (req, res) => {
+    res.render("homepage")
+});
 app.get('/introduction', (req, res) => {
     res.render("introduction")
 });
