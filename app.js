@@ -14,7 +14,7 @@ const PORT = process.env.PORT || 3000
 
 const dataURL = process.env.MONGOLAB_URI;
 const MongoClient = require('mongodb').MongoClient;
-const urlencodedParser = bodyParser.urlencoded({ extended: true });
+const urlencodedParser = bodyParser.urlencoded({ extended: false });
 const jsonParser = bodyParser.json();
 
 const port = process.env.PORT;
@@ -52,17 +52,28 @@ app.get('/contactSuccess', urlencodedParser, routes.contactSuccess);
 app.get('*', routes.notFound);
 
 // For production (Heroku) http:// requests, redirect to https://
-if (app.get('env') === 'production') {
-    app.get((req, res, next) => {
-        if (req.header('X-Forwarded-Proto') !== 'https') {
-            res.redirect(`https://${req.header('host').replace(/^www\./, '')}${req.url}`)
-        }
-        else {
-            next()
-        }
-    })
-}
+// if (app.get('env') === 'production') {
+    //     app.get((req, res, next) => {
+    //         if (req.header('X-Forwarded-Proto') !== 'https') {
+    //             res.redirect(`https://${req.header('host').replace(/^www\./, '')}${req.url}`)
+    //         }
+    //         else {
+    //             next()
+    //         }
+    //     })
+    // }
 
+const forceSSL = function() { 
+    return function(req, res, next) {
+        if (req.headers['x-forwarded-proto'] !== 'https') {
+            return res.redirect(
+                ['https://', req.get('Host'), req.url].join('')
+            );
+        }
+        next();
+    }
+};
+app.use(forceSSL());
 // app.listen(process.env.PORT, process.env.IP || '0.0.0.0');
 
 app.listen(PORT, () => {
