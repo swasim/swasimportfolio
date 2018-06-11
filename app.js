@@ -81,13 +81,7 @@ app.get('*', (request, response) => {
     response.sendFile(path.join(__dirname, 'client/build', 'index.html'));
 });
 
-app.use('/introduction', function(req, res, next) {
-    var old_url = req.url;
-    req.url = '/introduction';
 
-    console.log('introduction: ' + old_url + ' -> ' + req.url);
-    next();
-});
 // For production (Heroku) http:// requests, redirect to https://
 // if (app.get('env') === 'production') {
 //     app.get((req, res, next) => {
