@@ -1,28 +1,61 @@
-<header id=headerTop>
-    <nav class="nav navbar-inverse navbar-fixed-top">
-    <div class="container-fluid">
-         <div class="navbar-header">
-               <button type="button"
-                       class="navbar-toggle" 
-                       data-toggle="collapse"
-                       data-target="#myNavbar">
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>            
-            </button>
-              <a class="navbar-brand" href="/">Saher Wasim</a>
-         </div>
-         <div class="collapse navbar-collapse" id="myNavbar">
-              <ul class="nav navbar-nav navbar-right">
-                 <li class="active"><a href="/">Home</a></li>
-                 <li><a href="/introduction">About Me</a></li>         
-                 <li><a href="/myprojects">Projects</a></li>     
-                 <li><a href="/resume">Resume</a></li>
-                 <li><a href="/contact">Contact Me</a></li>
-              </ul>
-         </div>                      
-    </div>
-    </nav>
-</header>
+<span>
+    <style>
+        .navbutton {
+            -webkit-transition: 0.3s background;
+            -moz-transition: 0.3s background;
+            transition: 0.3s background;
+        }
+        .navbutton:active { 
+            background: black;
+        }
+    </style>
+    <script type='text/javascript'>
+            $('#intro').click(function() {
+                window.history.pushState('obj', 'newtitle', '/introduction');
+               return false;
+            });
+        </script>
+    <header id=headerTop>
+        
+        <nav class="nav navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+             <div class="navbar-header">
+                   <button type="button"
+                           class="navbar-toggle" 
+                           data-toggle="collapse"
+                           data-target="#myNavbar">
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>            
+                </button>
+                  <a class="navbar-brand" href="/" class="navbutton">Saher Wasim</a>
+             </div>
+             <div class="collapse navbar-collapse" id="myNavbar">
+                  <ul class="nav navbar-nav navbar-right">
+                     <li class="navbutton active"><a href="/" onclick="active(this)">Home</a></li>
+                     <li class="navbutton"><a href="/introduction" id="intro"onclick="active(this)">About Me</a></li>         
+                     <li class="navbutton"><a href="/myprojects" onclick="active(this)">Projects</a></li>     
+                     <li class="navbutton"><a href="/resume" onclick="active(this)">Resume</a></li>
+                     <li class="navbutton"><a href="/contact" onclick="active(this)">Contact Me</a></li>
+                  </ul>
+             </div>                      
+        </div>
+        </nav>
+        
+    </header>
+    <script>
+        // Add active class to the current button (highlight it)
+        var header = document.getElementByTagName("ul");
+        var btns = header.getElementsByClassName("navbutton");
+        for (var i = 0; i < btns.length; i++) {
+          btns[i].addEventListener("click", function() {
+            var current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+          });
+        }
+    </script>
+   
+</span>
 
 

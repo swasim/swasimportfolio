@@ -1,6 +1,6 @@
 body {
-   font-family: "Comic Sans MS";
-    
+    font-family: "Comic Sans MS";
+
     margin: 0;
     padding: 0;
 }
@@ -10,8 +10,6 @@ body {
 }
 
 /* ------ Nav Bar styling -------*/
-
-
 
 nav ul {
     list-style-position: inside;
@@ -24,8 +22,8 @@ nav ul {
     z-index: 10;
     font-size: 1em;
     line-height: 1.5em;
-    
- 
+
+
 }
 
 nav ul li {
@@ -36,7 +34,7 @@ nav ul li {
 
 nav ul li a {
     font-size: 20px;
-	font-weight: 350;
+    font-weight: 350;
     display: block;
     color: white;
     text-align: center;
@@ -45,6 +43,7 @@ nav ul li a {
     z-index: 10;
 }
 
+
 nav ul li:last-child {
     border-right: none;
     z-index: 10;
@@ -52,21 +51,27 @@ nav ul li:last-child {
 
 
 
-nav ul li a, .dropbtn {
+nav ul li a,
+.dropbtn {
     display: inline-block;
     color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     z-index: 10;
-    
+
 }
 
-nav ul li a:hover, .dropdown:hover .dropbtn {
-    color: ;
+nav ul li a:hover,
+.dropdown:hover .dropbtn {
     z-index: 10;
     text-decoration: none;
 }
+
+nav ul li a:active {
+    background: black;
+}
+
 
 nav ul li.dropdown {
     display: inline-block;
@@ -78,10 +83,10 @@ nav ul li.dropdown {
     position: fixed;
     background-color: #f9f9f9;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
     z-index: 10;
-  
+
 }
 
 .dropdown-content a {
@@ -95,14 +100,15 @@ nav ul li.dropdown {
 
 .dropdown-content a:hover {
     background-color: green;
-    z-index: 10;    
+    z-index: 10;
 }
 
 .dropdown:hover .dropdown-content {
     display: block;
-    position:fixed;
+    position: fixed;
     z-index: 10;
 }
+
 .floatingleft {
     float: left;
     width: 33.33333333%;
@@ -111,6 +117,7 @@ nav ul li.dropdown {
     padding-right: 15px;
     padding-left: 15px;
 }
+
 .text-center {
     text-align: center;
 }
@@ -131,7 +138,7 @@ nav ul li.dropdown {
     width: 100%;
     height: 50px;
     background: #010b29;
-    border-bottom: 1.5px solid rgba(255,255,255,0.15);
+    border-bottom: 1.5px solid rgba(255, 255, 255, 0.15);
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
     -webkit-transition: all 250ms ease-in;
@@ -140,14 +147,15 @@ nav ul li.dropdown {
     -o-transition: all 250ms ease-in;
     transition: all 250ms ease-in;
 }
+
 .show {
-    background: none; 
+    background: none;
 
 }
 
-.transition {    
-  -webkit-transition: all 1s ease-in-out;
-	-moz-transition: all 1s ease-in-out;
-	-o-transition: all 1s ease-in-out;
-	transition: all 1s ease-in-out;
+.transition {
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
 }
