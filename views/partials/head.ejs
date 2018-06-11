@@ -46,23 +46,24 @@
 <link rel = "stylesheet" type="text/css" href= "/stylesheets/hp.css">
  
 <script>
-var uHost = location.hostname;
+var uHost = 'saherwasim.com';
 var uPath = location.pathname;
 var uHref = location.href;
 var errEle = document.getElementById('error-div');
 var loading = document.getElementById('loading');
 var qStr = uHref.split('?x=')[1];
-
-	if(qStr == 'sm') {
-		if(uPath.split('/').length > 2){
-			location.assign('https://' + 'saherwasim.com' + '/' + uPath.split("/")[2].toLowerCase());
-		} else {
-			errEle.style.opacity = '1';
-			loading.style.opacity = '0';
-		}
-	} else {
-		location.assign(uHref.toLowerCase());
-	}
+location.assign('https://' + uHost + '/' + uPath.split("/")[2].toLowerCase());
+	//if(qStr == 'sm') {
+	    
+// 		if(uPath.split('/').length > 2){
+// 			location.assign('https://' + uHost + '/' + uPath.split("/")[2].toLowerCase());
+// 		} else {
+// 			errEle.style.opacity = '1';
+// 			loading.style.opacity = '0';
+// 		}
+// 	} else {
+// 		location.assign(uHref.toLowerCase());
+// 	}
 </script>
 
 
