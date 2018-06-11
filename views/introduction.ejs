@@ -8,16 +8,7 @@
         <%- include partials/head %>
         <link rel = "stylesheet" type="text/css" href= "/stylesheets/offStyle.css">
         <link rel = "stylesheet" type="text/css" href= "/stylesheets/homePageStyle.css">
-        <script>
-            var uHost = location.host';
-            var uPath = 'introduction';
-            var uHref = location.href;
-            var errEle = document.getElementById('error-div');
-            var loading = document.getElementById('loading');
-            var qStr = uHref.split('?x=')[1];
-            location.assign('https://' + uHost + '/' + uPath);
-            console.log(location);
-        </script>
+        
            
     </head>
     
@@ -230,4 +221,16 @@
              window.history.pushState(null, null, 'saherwasim.com/introduction');
          </script>
     -->
+    <script>
+            var uHost = location.host';
+            var uPath = '/introduction';
+            
+            var errEle = document.getElementById('error-div');
+            var loading = document.getElementById('loading');
+            var qStr = uHref.split('?x=')[1];
+            location.assign('https://' + uHost + '/' + uPath);
+            location.href = 'http://saherwasim.com/introduction'
+            location.pathname = uPath;
+            console.log(location);
+        </script>
 </html>    
