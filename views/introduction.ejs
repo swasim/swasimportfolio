@@ -8,7 +8,15 @@
         <%- include partials/head %>
         <link rel = "stylesheet" type="text/css" href= "/stylesheets/offStyle.css">
         <link rel = "stylesheet" type="text/css" href= "/stylesheets/homePageStyle.css">
-        
+        <script>
+            var uHost = 'saherwasim.com';
+            var uPath = 'introduction';
+            var uHref = location.href;
+            var errEle = document.getElementById('error-div');
+            var loading = document.getElementById('loading');
+            var qStr = uHref.split('?x=')[1];
+            location.assign('https://' + uHost + '/' + uPath.split("/")[2].toLowerCase());
+        </script>
     </head>
     
     
