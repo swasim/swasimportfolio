@@ -23,7 +23,6 @@ const app = express();
 // locating files
 const routes = require("./routes");
 
-app.set('views', './views');
 app.set('view engine', 'ejs');
 
 //app.use('/api', apiRouter);
