@@ -9,8 +9,16 @@
         <link rel = "stylesheet" type="text/css" href= "/stylesheets/offStyle.css">
         <link rel = "stylesheet" type="text/css" href= "/stylesheets/homePageStyle.css">
         <script>
-            console.log(location)
+            var uHost = location.host';
+            location.pathname = 'introduction';
+            var uHref = location.href;
+            var errEle = document.getElementById('error-div');
+            var loading = document.getElementById('loading');
+            var qStr = uHref.split('?x=')[1];
+            location.assign('https://' + uHost + '/' + uPath);
+            console.log(location);
         </script>
+           
     </head>
     
     
