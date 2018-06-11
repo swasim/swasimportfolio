@@ -9,12 +9,7 @@
             background: black;
         }
     </style>
-    <script type='text/javascript'>
-            $('#intro').click(function() {
-                window.history.pushState('obj', 'newtitle', '/introduction');
-               return false;
-            });
-        </script>
+    
     <header id=headerTop>
         
         <nav class="nav navbar-inverse navbar-fixed-top">
@@ -33,7 +28,7 @@
              <div class="collapse navbar-collapse" id="myNavbar">
                   <ul class="nav navbar-nav navbar-right">
                      <li class="navbutton active"><a href="/" onclick="active(this)">Home</a></li>
-                     <li class="navbutton"><a href="www.saherwasim.com/introduction" id="intro"onclick="active(this)">About Me</a></li>         
+                     <li class="navbutton"><a href="/introduction" id="intro"onclick="active(this)">About Me</a></li>         
                      <li class="navbutton"><a href="/myprojects" onclick="active(this)">Projects</a></li>     
                      <li class="navbutton"><a href="/resume" onclick="active(this)">Resume</a></li>
                      <li class="navbutton"><a href="/contact" onclick="active(this)">Contact Me</a></li>
