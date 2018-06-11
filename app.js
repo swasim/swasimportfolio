@@ -28,21 +28,41 @@ app.set('view engine', 'ejs');
 
 //app.use('/api', apiRouter);
 const path = require('path');
-app.use(express.static(path.join('public')));
 
+
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static(path.join('public')));
+}
 
 
 //routes
 app.get('/', routes.homepage);
-app.get('/introduction', routes.introduction);
-app.get('/myworld', routes.myworld);
-app.get('/resume', routes.resume);
-app.get('/myblog', routes.myBlog);
-app.get('/myprojects', routes.myprojects);
-app.get('/myprojects/:projectNumber?', routes.myprojects);
+app.get('/introduction', (req, res) => {
+    res.render("introduction")
+});
+app.get('/myworld', (req, res) => {
+    res.render("myworld")
+});
+app.get('/resume', (req, res) => {
+    res.render("resume")
+});
+app.get('/myblog', (req, res) => {
+    res.render("myBlog")
+});
+app.get('/myprojects', (req, res) => {
+    res.render("myprojects")
+});
+app.get('/myprojects/:projectNumber?', (req, res) => {
+    res.render("myprojects")
+});
 
-app.get('/projectDNA', routes.projectDNA);
-app.get('/projectDesign', routes.projectDesign);
+app.get('/projectDNA', (req, res) => {
+    res.render("projectDNA");
+})
+
+app.get('/projectDesign', (req, res) => {
+    res.render("projectDesign")
+});
 
 app.get('/contact', routes.contactme);
 app.post('/contact', urlencodedParser, routes.contactSuccess);
@@ -51,6 +71,14 @@ app.get('/contactSuccess', urlencodedParser, routes.contactSuccess);
 //not found
 app.get('*', routes.notFound);
 
+
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static('public'));
+}
+
+app.get('*', (request, response) => {
+    response.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+});
 // For production (Heroku) http:// requests, redirect to https://
 // if (app.get('env') === 'production') {
 //     app.get((req, res, next) => {

@@ -1,55 +1,55 @@
-const express = require( 'express' );
+const express = require('express');
 const bodyParser = require('body-parser');
 const assert = require('assert');
 const mongodb = require('mongodb');
-const MongoClient =  require('mongodb').MongoClient;
-const dataURL = process.env.MONGOLAB_URI; 
+const MongoClient = require('mongodb').MongoClient;
+const dataURL = process.env.MONGOLAB_URI;
 const app = express();
 // const homepage = require('./homepage.js');
 // const resume = require('./resume.js');
 
 //MongoDB setup
-app.use(bodyParser.urlencoded({ extended: false })) 
+app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json());
 
-exports.homepage = function (req, res) {
-    //var projects = projectsJSON.projects;
-   
-    return res.render("homepage");
+// exports.homepage = function(req, res) {
+//     //var projects = projectsJSON.projects;
+
+//     return res.render("homepage");
+// };
+
+
+// exports.resume = function(req, res) {
+//     return res.render("resume");
+// };
+
+// exports.introduction = function(req, res) {
+//     return res.render("introduction");
+// };
+
+// exports.myworld = function(req, res) {
+//     return res.render("myworld");
+// };
+
+// exports.myBlog = function(req, res) {
+//     return res.render("myBlog");
+// };
+
+exports.contactme = function(req, res, next) {
+    res.render('contactme');
 };
 
 
-exports.resume = function (req, res) {
-    return res.render("resume");
-};
-
-exports.introduction = function (req, res) {
-    return res.render("introduction");
-};
-
-exports.myworld = function (req, res) {
-    return res.render("myworld");
-};
-
-exports.myBlog = function (req, res) {
-    return res.render("myBlog");
-};
-
-exports.contactme = function(req, res, next){
-	res.render('contactme');
-};
-
-
-exports.contactSuccess = function (req, res, next) {
+exports.contactSuccess = function(req, res, next) {
     var email = {
         name: req.body.name,
         email: req.body.email,
         message: req.body.message
     }
-    MongoClient.connect(dataURL, function(err, dataURL){
+    MongoClient.connect(dataURL, function(err, dataURL) {
         console.log("Connected");
         assert.equal(null, err);
-        dataURL.collection('emails').insertOne(email, function(err, result){
+        dataURL.collection('emails').insertOne(email, function(err, result) {
             assert.equal(null, err);
             console.log('Email inserted');
             if (err)
@@ -64,17 +64,18 @@ exports.contactSuccess = function (req, res, next) {
 
 
 
-exports.myprojects = function (req, res) {
-    res.render("myprojects");
-};
+// exports.myprojects = function(req, res) {
 
-exports.projectDNA = function (req, res) {
-    res.render("projectDNA");
-};
+        //     res.render("myprojects");
+        // };
 
-exports.projectDesign = function (req, res) {
-    res.render("projectDesign");
-};
+        // exports.projectDNA = function(req, res) {
+        //     res.render("projectDNA");
+        // };
+
+        // exports.projectDesign = function(req, res) {
+        //     res.render("projectDesign");
+        // };
 
 /*
 exports.myprojects = function(req, res) {
@@ -123,7 +124,7 @@ var projectsJSON = require('../projects.json');
 
 
 exports.notFound = function(req, res) {
-	res.render('notFound', {
-		title : "Oops, this page doesn't exist"
-	});
+    res.render('notFound', {
+        title: "Oops, this page doesn't exist"
+    });
 };
